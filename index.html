@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リニューアルキャンペーン｜8/14スタート 先着100セット限定 調味料セット｜にっぽん津々浦々</title>
+<meta name="description" content="にっぽん津々浦々ショップリニューアル記念。8/14スタート、先着100セット限定。スタッフが厳選した「さ・し・す・せ・そ」基礎調味料セットと、極み調味料三選セットを販売。好きをくまなく。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#ECE5D1;
+  --paper-2:#F5F0E1;
+  --card:#FBF8EF;
+  --ink:#242017;
+  --ink-soft:#726A5A;
+  --pink:#EF8299;
+  --pink-deep:#E56A85;
+  --pink-soft:#F9DBE0;
+  --yellow:#FCE24C;
+  --white:#FFFFFF;
+  --line:#DED4BD;
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+  -webkit-font-smoothing:antialiased; line-height:1.85;
+}
+img{ max-width:100%; display:block; }
+a{ text-decoration:none; color:inherit; }
+.maru{ font-family:"Zen Maru Gothic",sans-serif; }
+
+/* 背景 */
+.bg-pattern{ position:fixed; inset:0; z-index:-1; background:var(--paper); }
+
+/* レイアウト */
+.wrap{ max-width:760px; margin:0 auto; background:var(--paper); position:relative; }
+.inner{ padding:52px 24px; }
+.eyebrow{
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:.72rem;
+  letter-spacing:.2em; color:var(--pink-deep); margin-bottom:14px;
+}
+.eyebrow::before,.eyebrow::after{ content:''; height:1px; width:24px; background:var(--pink); opacity:.6; }
+.sec-title{
+  text-align:center; font-family:"Zen Maru Gothic",sans-serif; font-weight:900;
+  font-size:1.5rem; line-height:1.6; color:var(--ink); margin:0 0 16px; letter-spacing:.02em;
+}
+.sec-title .pink{ color:var(--pink-deep); }
+.sec-lead{ text-align:center; font-size:.92rem; color:var(--ink-soft); margin:0 auto; max-width:560px; }
+
+/* ヘッダー */
+.header{
+  position:fixed; top:0; left:0; right:0; z-index:60; max-width:760px; margin:0 auto;
+  background:rgba(236,229,209,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);
+}
+.header-inner{ display:flex; align-items:baseline; justify-content:center; gap:10px; padding:12px 16px; }
+.header-brand{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:1rem; color:var(--ink); letter-spacing:.08em; }
+.header-tag{ font-size:.64rem; color:var(--pink-deep); font-weight:700; letter-spacing:.1em; }
+.header-spacer{ height:46px; }
+
+/* 帯 */
+.band{
+  text-align:center; font-family:"Zen Maru Gothic",sans-serif; font-weight:700;
+  font-size:.8rem; letter-spacing:.02em; padding:12px 16px; line-height:1.6;
+  background:var(--ink); color:var(--paper);
+}
+.band-pink{ background:var(--pink); color:var(--white); }
+.band-cream{ background:var(--paper-2); color:var(--ink); }
+
+/* ファーストビュー */
+.fv img{ width:100%; display:block; }
+
+/* 販売開始・限定バッジ + カウントダウン */
+.launch{ padding:34px 24px 8px; text-align:center; }
+.limited-badge{
+  display:inline-flex; flex-direction:column; align-items:center; justify-content:center;
+  width:130px; height:130px; border-radius:50%; background:var(--pink); color:var(--white);
+  font-family:"Zen Maru Gothic",sans-serif; transform:rotate(-6deg); margin-bottom:20px;
+  box-shadow:0 8px 20px rgba(229,106,133,.35);
+}
+.limited-badge b{ font-size:.72rem; font-weight:700; letter-spacing:.04em; }
+.limited-badge .num{ font-size:2.4rem; font-weight:900; line-height:1; margin:1px 0; }
+.limited-badge small{ font-size:.72rem; font-weight:700; }
+.countdown{
+  max-width:440px; margin:0 auto; background:var(--card); border:1px solid var(--line);
+  border-radius:16px; padding:14px 16px;
+}
+.cd-label{ font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:.74rem; color:var(--pink-deep); margin:0 0 6px; letter-spacing:.04em; }
+.cd-timer{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:1.5rem; color:var(--ink); }
+.cd-timer .u{ font-size:.6rem; font-weight:700; color:var(--ink-soft); margin:0 6px 0 2px; }
+
+/* ブランドメッセージ */
+.brand-illust{ padding:8px 0 0; }
+.brand-illust img{ width:100%; display:block; }
+.brand-msg{ padding:14px 24px 46px; }
+.brand-msg p{ font-size:.92rem; color:var(--ink); margin:0 0 16px; }
+.brand-msg .small{ font-size:.78rem; color:var(--ink-soft); line-height:1.9; }
+.tagline{
+  text-align:center; font-family:"Zen Maru Gothic",sans-serif; font-weight:900;
+  font-size:1.7rem; color:var(--ink); margin:6px 0 22px; letter-spacing:.06em;
+}
+
+/* 限定セット */
+.sets{ background:var(--paper-2); padding:52px 0; }
+.set-card{
+  max-width:600px; margin:0 auto 34px; background:var(--card);
+  border:1px solid var(--line); border-radius:20px; overflow:hidden;
+  box-shadow:0 10px 26px rgba(120,100,70,.1);
+}
+.set-card:last-child{ margin-bottom:0; }
+.set-photo{ width:100%; display:block; background:var(--white); }
+.set-body{ padding:24px 22px 26px; }
+.set-no{
+  display:inline-block; font-family:"Zen Maru Gothic",sans-serif; font-weight:900;
+  font-size:.74rem; color:var(--white); background:var(--pink); border-radius:999px;
+  padding:4px 16px; margin-bottom:12px; letter-spacing:.06em;
+}
+.set-catch{ font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:.9rem; color:var(--pink-deep); margin:0 0 6px; }
+.set-name{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:1.2rem; line-height:1.5; color:var(--ink); margin:0 0 12px; }
+.set-price{ display:flex; align-items:baseline; gap:8px; margin:0 0 14px; flex-wrap:wrap; }
+.set-price .yen{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:2rem; color:var(--ink); }
+.set-price .tax{ font-size:.72rem; color:var(--ink-soft); }
+.set-price .free{ font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:.72rem; color:var(--white); background:var(--pink-deep); border-radius:999px; padding:3px 10px; }
+.set-desc{ font-size:.86rem; color:var(--ink-soft); margin:0 0 18px; }
+
+.contents-ttl{
+  font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:.78rem; color:var(--ink);
+  text-align:center; letter-spacing:.1em; margin:0 0 12px; position:relative;
+}
+.contents-ttl span{ background:var(--card); padding:0 12px; position:relative; z-index:1; }
+.contents-ttl::before{ content:''; position:absolute; left:0; right:0; top:50%; height:1px; background:var(--line); }
+.contents-list{ list-style:none; margin:0 0 20px; padding:0; }
+.contents-list li{ display:flex; align-items:center; gap:12px; padding:11px 0; border-bottom:1px dashed var(--line); }
+.contents-list li:last-child{ border-bottom:none; }
+.sasi-label{
+  flex:none; width:34px; height:34px; border-radius:50%; background:var(--pink-soft); color:var(--pink-deep);
+  font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:1.05rem;
+  display:flex; align-items:center; justify-content:center;
+}
+.contents-list .c-name{ flex:1; font-size:.82rem; line-height:1.5; color:var(--ink); }
+.contents-list .c-name a{ color:var(--ink); border-bottom:1px solid var(--pink); }
+.contents-list .c-arrow{ flex:none; color:var(--pink-deep); font-size:.9rem; }
+
+.set-btn{
+  display:block; text-align:center; font-family:"Zen Maru Gothic",sans-serif; font-weight:700;
+  font-size:1rem; color:var(--white); background:var(--pink); border-radius:999px; padding:15px 20px;
+  box-shadow:0 8px 18px rgba(229,106,133,.3);
+}
+.set-btn.is-ended{ background:#C9BDA8; box-shadow:none; pointer-events:none; }
+
+/* yamyam 注記 */
+.yam-note{ background:var(--paper); padding:40px 26px; text-align:center; }
+.yam-note h3{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:1.15rem; color:var(--ink); margin:0 0 12px; letter-spacing:.04em; }
+.yam-note p{ font-size:.8rem; color:var(--ink-soft); margin:0 auto; max-width:560px; line-height:1.9; }
+
+/* 注意書き・フッター */
+.notices{ background:var(--card); padding:32px 26px 90px; }
+.notices-ttl{ font-family:"Zen Maru Gothic",sans-serif; font-size:.8rem; font-weight:700; color:var(--ink-soft); text-align:center; margin:0 0 12px; }
+.notices ul{ margin:0; padding:0 0 0 1.1em; }
+.notices li{ font-size:.68rem; color:var(--ink-soft); line-height:1.9; }
+.footer{ background:var(--ink); color:var(--paper); text-align:center; padding:28px 20px 100px; font-size:.74rem; line-height:1.9; }
+.footer .fbrand{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; letter-spacing:.08em; }
+.footer a{ color:var(--pink); font-weight:700; }
+
+/* 追従CTA */
+.sticky-cta{
+  position:fixed; bottom:0; left:50%; transform:translateX(-50%); z-index:50;
+  width:100%; max-width:760px; padding:10px 16px;
+  background:rgba(236,229,209,.95); backdrop-filter:blur(6px); box-shadow:0 -4px 18px rgba(120,100,70,.18);
+}
+.sticky-cta .set-btn{ margin:0; font-size:.9rem; padding:13px; }
+
+@media screen and (min-width:768px){
+  .inner{ padding:66px 40px; }
+  .sec-title{ font-size:1.8rem; }
+  .tagline{ font-size:2rem; }
+  .sticky-cta{ display:none; }
+}
+</style>
+</head>
+<body>
+<div class="bg-pattern" aria-hidden="true"></div>
+<div class="wrap">
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <span class="header-brand">にっぽん津々浦々</span>
+      <span class="header-tag">リニューアルキャンペーン</span>
+    </div>
+  </header>
+  <div class="header-spacer"></div>
+
+  <div class="band band-pink">8/14スタート｜【先着100セット限定】リニューアル記念 調味料セット販売</div>
+
+  <!-- ============================================================
+       ファーストビュー ▼差し替え: images/hero/fv.jpg
+       ============================================================ -->
+  <section class="fv">
+    <img src="images/hero/fv.jpg" alt="にっぽん津々浦々 リニューアルキャンペーン 8/14スタート">
+  </section>
+
+  <!-- 限定バッジ + カウントダウン -->
+  <div class="launch">
+    <span class="limited-badge">
+      <b>先着</b><span class="num">100</span><small>セット限定</small>
+    </span>
+    <div class="countdown">
+      <p class="cd-label" id="cdLabel">キャンペーン開始まで</p>
+      <div class="cd-timer" id="cdTimer">--<span class="u">日</span>--<span class="u">時間</span></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ブランドメッセージ「好きをくまなく。」 ▼差し替え: images/brand/kumanaku.jpg
+       ============================================================ -->
+  <section class="brand-illust">
+    <img src="images/brand/kumanaku.jpg" alt="好きをくまなく。 にっぽん津々浦々の約束">
+  </section>
+  <section class="brand-msg">
+    <div class="inner" style="padding:8px 0 0;">
+      <p>『にっぽん津々浦々』は、この度ショップリニューアルを実施いたしました。</p>
+      <p>『にっぽん津々浦々』は、食品から生活雑貨まで、つくり手、届け手、使い手、それぞれの心からの「好き」が集まるECサイトを目指して運営してきました。今回のリニューアルは、商品やサービスを大きく変えるものではなく、これまで大切にしてきた「好き」をていねいに選び、まじめに届ける姿勢を、言葉とデザインによって、より分かりやすくお伝えするために実施いたしました。</p>
+      <p>一人ひとり異なる「好き」が集まり、暮らしの中に小さな喜びが花開いていくようにとの思いを込めました。</p>
+      <p class="small">さらに、ブランドのアイデンティティを言語化した「好きをくまなく。」という新しいタグラインを掲げました。各サイトにはそれを体現すべく人気イラストレーター・yamyamさんによる、温かくほっこりとする日常風景のイラストがあしらわれています。イラストは様々なシーンに登場する予定ですので、ぜひご注目ください。</p>
+    </div>
+  </section>
+
+  <div class="band">リニューアル記念・限定セットのご案内</div>
+
+  <!-- ============================================================
+       限定セット
+       ============================================================ -->
+  <section class="sets">
+    <div class="inner" style="padding-top:0;">
+      <span class="eyebrow">STAFF SELECTION</span>
+      <h2 class="sec-title">スタッフの<span class="pink">「心からの好き」</span>を<br>集めた調味料セット</h2>
+      <p class="sec-lead">「好きをくまなく。」の想いをお客様にも還元したく、私たちスタッフが選びました。毎日の食卓がグッと特別になる、温かい時間をお届けします。</p>
+    </div>
+
+    <!-- セット① -->
+    <article class="set-card">
+      <img src="images/sets/set1.jpg" alt="お試し さ・し・す・せ・そ セット" class="set-photo">
+      <div class="set-body">
+        <span class="set-no">SET 01</span>
+        <p class="set-catch">はじめましてのあなたに！</p>
+        <h3 class="set-name">もっと料理が好きになる<br>基礎調味料（さしすせそ）セット</h3>
+        <div class="set-price"><span class="yen">2,500<span class="tax" style="font-weight:400;">円</span></span><span class="free">送料無料</span></div>
+        <p class="set-desc">お料理の基本「さ・し・す・せ・そ（砂糖・塩・酢・醤油・味噌）」。毎日使うものだからこそ、美味しく、使いやすく、安心できるものを。全国のつくり手が丹精込めた調味料が、いつもの味をワンランク上の豊かな味わいへ導きます。</p>
+
+        <p class="contents-ttl"><span>セット内容（全5点）</span></p>
+        <ul class="contents-list">
+          <li><span class="sasi-label">さ</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/satunan-shima500/" target="_blank" rel="noopener">薩南製糖 島砂糖 500g</a></span><span class="c-arrow">→</span></li>
+          <li><span class="sasi-label">し</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/uminosei-arashio240g/" target="_blank" rel="noopener">海の精 あらしお 240g</a></span><span class="c-arrow">→</span></li>
+          <li><span class="sasi-label">す</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/robai-500/" target="_blank" rel="noopener">河原酢造 有機純米酢 老梅 500ml</a></span><span class="c-arrow">→</span></li>
+          <li><span class="sasi-label">せ</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/chiba-s200/" target="_blank" rel="noopener">千葉醤油 超特選 下総生しょうゆ 200ml</a></span><span class="c-arrow">→</span></li>
+          <li><span class="sasi-label">そ</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/yamataka-h300/" target="_blank" rel="noopener">山高味噌 秘蔵みそ 300g</a></span><span class="c-arrow">→</span></li>
+        </ul>
+        <a href="#" class="set-btn" data-sale>このセットを購入する</a>
+      </div>
+    </article>
+
+    <!-- セット② -->
+    <article class="set-card">
+      <img src="images/sets/set2.jpg" alt="極み調味料三選セット 料理酒・醤油・みりん" class="set-photo">
+      <div class="set-body">
+        <span class="set-no">SET 02</span>
+        <p class="set-catch">お料理好きのあなたに！</p>
+        <h3 class="set-name">スタッフ厳選 一度は使ってみたい<br>極み調味料 三選セット</h3>
+        <div class="set-price"><span class="yen">3,500<span class="tax" style="font-weight:400;">円</span></span><span class="free">送料無料</span></div>
+        <p class="set-desc">日々キッチンに立つ皆様へ。当店スタッフが自信を持っておすすめする「醤油・みりん・料理酒」の3点。素材本来の旨味を引き出し、奥深いコクを与える調味料が、和食はもちろん様々なお料理の楽しさを広げます。ギフトにもおすすめです。</p>
+
+        <p class="contents-ttl"><span>セット内容（全3点）</span></p>
+        <ul class="contents-list">
+          <li><span class="sasi-label" style="font-size:.66rem;">醤油</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/inoue-koshiki720ml/" target="_blank" rel="noopener">井上醤油店 井上 古式じょうゆ 720ml</a></span><span class="c-arrow">→</span></li>
+          <li><span class="sasi-label" style="font-size:.66rem;">みりん</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/ogasawara-600/" target="_blank" rel="noopener">小笠原味淋醸造 焼酎仕込み 一子相傳 600ml</a></span><span class="c-arrow">→</span></li>
+          <li><span class="sasi-label" style="font-size:.62rem;">料理酒</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/hakusen-hanamikura720/" target="_blank" rel="noopener">白扇酒造 福来純 純米料理酒 720ml</a></span><span class="c-arrow">→</span></li>
+        </ul>
+        <a href="#" class="set-btn" data-sale>このセットを購入する</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- yamyam 注記 -->
+  <section class="yam-note">
+    <div class="tagline">好きをくまなく。</div>
+    <h3>イラスト：yamyam さん</h3>
+    <p>各サイトには「好きをくまなく。」を体現する、人気イラストレーター・yamyamさんによる温かくほっこりとする日常風景のイラストをあしらいました。様々なシーンに登場予定です。ぜひご注目ください。</p>
+  </section>
+
+  <!-- 注意書き -->
+  <section class="notices">
+    <p class="notices-ttl">ご注意事項</p>
+    <ul>
+      <li>限定セットは8/14スタート、先着100セット限定です。予定数に達し次第、販売を終了いたします。</li>
+      <li>価格はすべて税込・送料無料です。</li>
+      <li>セット内容・仕様は予告なく変更になる場合があります。</li>
+      <li>写真はイメージです。お使いのモニターにより色味が異なる場合があります。</li>
+    </ul>
+  </section>
+
+  <section class="footer">
+    <p class="fbrand">にっぽん津々浦々</p>
+    <p style="margin-top:6px;">好きをくまなく。</p>
+    <p style="margin-top:12px;"><a href="https://www.rakuten.co.jp/tsutsu-uraura/" target="_blank" rel="noopener">ショップトップページへ →</a></p>
+  </section>
+
+  <!-- 追従CTA -->
+  <div class="sticky-cta">
+    <a href="#" class="set-btn" data-sale>先着100セット限定｜セットを見る</a>
+  </div>
+
+</div>
+
+<script>
+/* ===================== 設定(要編集) ===================== */
+/* TODO: セット購入ページのURLが決まったら、各 data-sale の href に設定してください(未定の間は # )。
+   下の SALE_URL に入れると全ボタンに一括反映されます。 */
+const SALE_URL = "#";
+
+/* キャンペーン期間: 8/14スタート(先着100セット・終了日は数量次第) */
+const CAMPAIGN_START = new Date("2026-08-14T00:00:00+09:00");
+
+document.querySelectorAll('[data-sale]').forEach(b=>{ if(SALE_URL !== "#") b.setAttribute('href', SALE_URL); });
+
+/* ===================== カウントダウン(開始まで) ===================== */
+function pad(n){ return String(n).padStart(2,'0'); }
+function updateCountdown(){
+  const label = document.getElementById('cdLabel');
+  const timer = document.getElementById('cdTimer');
+  const now = new Date();
+  if(now < CAMPAIGN_START){
+    const d = CAMPAIGN_START - now;
+    const days = Math.floor(d/86400000);
+    const hours = Math.floor((d%86400000)/3600000);
+    const mins = Math.floor((d%3600000)/60000);
+    const secs = Math.floor((d%60000)/1000);
+    label.textContent = 'キャンペーン開始まで';
+    timer.innerHTML = `${days}<span class="u">日</span>${pad(hours)}<span class="u">時間</span>${pad(mins)}<span class="u">分</span>${pad(secs)}<span class="u">秒</span>`;
+  }else{
+    label.textContent = '先着100セット限定・好評販売中！';
+    timer.innerHTML = `<span style="font-size:1.1rem;">数量限定・なくなり次第終了</span>`;
+  }
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
