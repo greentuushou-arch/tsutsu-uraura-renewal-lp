@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -33,7 +33,7 @@ body{
 }
 img{ max-width:100%; display:block; }
 a{ text-decoration:none; color:inherit; }
-.maru{ font-family:"Zen Maru Gothic",sans-serif; }
+.maru{ font-family:"Noto Sans JP",sans-serif; }
 
 /* 背景 */
 .bg-pattern{ position:fixed; inset:0; z-index:-1; background:var(--paper); }
@@ -43,12 +43,12 @@ a{ text-decoration:none; color:inherit; }
 .inner{ padding:52px 24px; }
 .eyebrow{
   display:flex; align-items:center; justify-content:center; gap:10px;
-  font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:.72rem;
+  font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.72rem;
   letter-spacing:.2em; color:var(--pink-deep); margin-bottom:14px;
 }
 .eyebrow::before,.eyebrow::after{ content:''; height:1px; width:24px; background:var(--pink); opacity:.6; }
 .sec-title{
-  text-align:center; font-family:"Zen Maru Gothic",sans-serif; font-weight:900;
+  text-align:center; font-family:"Noto Sans JP",sans-serif; font-weight:900;
   font-size:1.5rem; line-height:1.6; color:var(--ink); margin:0 0 16px; letter-spacing:.02em;
 }
 .sec-title .pink{ color:var(--pink-deep); }
@@ -60,13 +60,13 @@ a{ text-decoration:none; color:inherit; }
   background:rgba(236,229,209,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);
 }
 .header-inner{ display:flex; align-items:baseline; justify-content:center; gap:10px; padding:12px 16px; }
-.header-brand{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:1rem; color:var(--ink); letter-spacing:.08em; }
+.header-brand{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1rem; color:var(--ink); letter-spacing:.08em; }
 .header-tag{ font-size:.64rem; color:var(--pink-deep); font-weight:700; letter-spacing:.1em; }
 .header-spacer{ height:46px; }
 
 /* 帯 */
 .band{
-  text-align:center; font-family:"Zen Maru Gothic",sans-serif; font-weight:700;
+  text-align:center; font-family:"Noto Sans JP",sans-serif; font-weight:700;
   font-size:.8rem; letter-spacing:.02em; padding:12px 16px; line-height:1.6;
   background:var(--ink); color:var(--paper);
 }
@@ -74,14 +74,24 @@ a{ text-decoration:none; color:inherit; }
 .band-cream{ background:var(--paper-2); color:var(--ink); }
 
 /* ファーストビュー */
+.fv{ position:relative; overflow:hidden; }
 .fv img{ width:100%; display:block; }
+.fv-confetti{ position:absolute; inset:0; z-index:3; pointer-events:none; overflow:hidden; }
+.confetti-piece{ position:absolute; top:-24px; opacity:0; will-change:transform,opacity; }
+.fv-confetti.is-play .confetti-piece{ animation-name:confetti-fall; animation-timing-function:ease-in; animation-fill-mode:forwards; }
+@keyframes confetti-fall{
+  0%{ transform:translate(0,0) rotate(0deg); opacity:0; }
+  12%{ opacity:1; }
+  88%{ opacity:1; }
+  100%{ transform:translate(var(--dx), var(--dy)) rotate(var(--dr)); opacity:0; }
+}
 
 /* 販売開始・限定バッジ + カウントダウン */
 .launch{ padding:34px 24px 8px; text-align:center; }
 .limited-badge{
   display:inline-flex; flex-direction:column; align-items:center; justify-content:center;
   width:130px; height:130px; border-radius:50%; background:var(--pink); color:var(--white);
-  font-family:"Zen Maru Gothic",sans-serif; transform:rotate(-6deg); margin-bottom:20px;
+  font-family:"Noto Sans JP",sans-serif; transform:rotate(-6deg); margin-bottom:20px;
   box-shadow:0 8px 20px rgba(229,106,133,.35);
 }
 .limited-badge b{ font-size:.72rem; font-weight:700; letter-spacing:.04em; }
@@ -91,8 +101,8 @@ a{ text-decoration:none; color:inherit; }
   max-width:440px; margin:0 auto; background:var(--card); border:1px solid var(--line);
   border-radius:16px; padding:14px 16px;
 }
-.cd-label{ font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:.74rem; color:var(--pink-deep); margin:0 0 6px; letter-spacing:.04em; }
-.cd-timer{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:1.5rem; color:var(--ink); }
+.cd-label{ font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.74rem; color:var(--pink-deep); margin:0 0 6px; letter-spacing:.04em; }
+.cd-timer{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.5rem; color:var(--ink); }
 .cd-timer .u{ font-size:.6rem; font-weight:700; color:var(--ink-soft); margin:0 6px 0 2px; }
 
 /* ブランドメッセージ */
@@ -102,7 +112,7 @@ a{ text-decoration:none; color:inherit; }
 .brand-msg p{ font-size:.92rem; color:var(--ink); margin:0 0 16px; }
 .brand-msg .small{ font-size:.78rem; color:var(--ink-soft); line-height:1.9; }
 .tagline{
-  text-align:center; font-family:"Zen Maru Gothic",sans-serif; font-weight:900;
+  text-align:center; font-family:"Noto Sans JP",sans-serif; font-weight:900;
   font-size:1.7rem; color:var(--ink); margin:6px 0 22px; letter-spacing:.06em;
 }
 
@@ -117,20 +127,35 @@ a{ text-decoration:none; color:inherit; }
 .set-photo{ width:100%; display:block; background:var(--white); }
 .set-body{ padding:24px 22px 26px; }
 .set-no{
-  display:inline-block; font-family:"Zen Maru Gothic",sans-serif; font-weight:900;
+  display:inline-block; font-family:"Noto Sans JP",sans-serif; font-weight:900;
   font-size:.74rem; color:var(--white); background:var(--pink); border-radius:999px;
   padding:4px 16px; margin-bottom:12px; letter-spacing:.06em;
 }
-.set-catch{ font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:.9rem; color:var(--pink-deep); margin:0 0 6px; }
-.set-name{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:1.2rem; line-height:1.5; color:var(--ink); margin:0 0 12px; }
-.set-price{ display:flex; align-items:baseline; gap:8px; margin:0 0 14px; flex-wrap:wrap; }
-.set-price .yen{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:2rem; color:var(--ink); }
-.set-price .tax{ font-size:.72rem; color:var(--ink-soft); }
-.set-price .free{ font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:.72rem; color:var(--white); background:var(--pink-deep); border-radius:999px; padding:3px 10px; }
+.set-catch{ font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.9rem; color:var(--pink-deep); margin:0 0 6px; }
+.set-name{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.2rem; line-height:1.5; color:var(--ink); margin:0 0 12px; }
+/* スペシャルプライス */
+.special-price{
+  position:relative; background:var(--pink); border-radius:14px;
+  padding:14px 16px 16px; margin:0 0 16px; text-align:center; color:var(--white);
+  box-shadow:0 8px 18px rgba(229,106,133,.28);
+}
+.special-price .sp-label{
+  display:inline-block; font-family:"Noto Sans JP",sans-serif; font-weight:900;
+  font-size:.82rem; letter-spacing:.08em; color:var(--pink-deep); background:var(--yellow);
+  border-radius:999px; padding:3px 16px; margin-bottom:6px; transform:rotate(-2deg);
+}
+.special-price .sp-price{ display:flex; align-items:baseline; justify-content:center; gap:2px; line-height:1; }
+.special-price .sp-num{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:3.2rem; letter-spacing:-.02em; }
+.special-price .sp-yen{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.3rem; }
+.special-price .sp-tax{ font-size:.68rem; opacity:.9; margin-left:4px; align-self:flex-end; margin-bottom:4px; }
+.special-price .sp-free{
+  display:inline-block; font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.74rem;
+  color:var(--pink-deep); background:var(--white); border-radius:999px; padding:3px 14px; margin-top:8px;
+}
 .set-desc{ font-size:.86rem; color:var(--ink-soft); margin:0 0 18px; }
 
 .contents-ttl{
-  font-family:"Zen Maru Gothic",sans-serif; font-weight:700; font-size:.78rem; color:var(--ink);
+  font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.78rem; color:var(--ink);
   text-align:center; letter-spacing:.1em; margin:0 0 12px; position:relative;
 }
 .contents-ttl span{ background:var(--card); padding:0 12px; position:relative; z-index:1; }
@@ -140,7 +165,7 @@ a{ text-decoration:none; color:inherit; }
 .contents-list li:last-child{ border-bottom:none; }
 .sasi-label{
   flex:none; width:34px; height:34px; border-radius:50%; background:var(--pink-soft); color:var(--pink-deep);
-  font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:1.05rem;
+  font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.05rem;
   display:flex; align-items:center; justify-content:center;
 }
 .contents-list .c-name{ flex:1; font-size:.82rem; line-height:1.5; color:var(--ink); }
@@ -148,7 +173,7 @@ a{ text-decoration:none; color:inherit; }
 .contents-list .c-arrow{ flex:none; color:var(--pink-deep); font-size:.9rem; }
 
 .set-btn{
-  display:block; text-align:center; font-family:"Zen Maru Gothic",sans-serif; font-weight:700;
+  display:block; text-align:center; font-family:"Noto Sans JP",sans-serif; font-weight:700;
   font-size:1rem; color:var(--white); background:var(--pink); border-radius:999px; padding:15px 20px;
   box-shadow:0 8px 18px rgba(229,106,133,.3);
 }
@@ -156,16 +181,16 @@ a{ text-decoration:none; color:inherit; }
 
 /* yamyam 注記 */
 .yam-note{ background:var(--paper); padding:40px 26px; text-align:center; }
-.yam-note h3{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; font-size:1.15rem; color:var(--ink); margin:0 0 12px; letter-spacing:.04em; }
+.yam-note h3{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.15rem; color:var(--ink); margin:0 0 12px; letter-spacing:.04em; }
 .yam-note p{ font-size:.8rem; color:var(--ink-soft); margin:0 auto; max-width:560px; line-height:1.9; }
 
 /* 注意書き・フッター */
 .notices{ background:var(--card); padding:32px 26px 90px; }
-.notices-ttl{ font-family:"Zen Maru Gothic",sans-serif; font-size:.8rem; font-weight:700; color:var(--ink-soft); text-align:center; margin:0 0 12px; }
+.notices-ttl{ font-family:"Noto Sans JP",sans-serif; font-size:.8rem; font-weight:700; color:var(--ink-soft); text-align:center; margin:0 0 12px; }
 .notices ul{ margin:0; padding:0 0 0 1.1em; }
 .notices li{ font-size:.68rem; color:var(--ink-soft); line-height:1.9; }
 .footer{ background:var(--ink); color:var(--paper); text-align:center; padding:28px 20px 100px; font-size:.74rem; line-height:1.9; }
-.footer .fbrand{ font-family:"Zen Maru Gothic",sans-serif; font-weight:900; letter-spacing:.08em; }
+.footer .fbrand{ font-family:"Noto Sans JP",sans-serif; font-weight:900; letter-spacing:.08em; }
 .footer a{ color:var(--pink); font-weight:700; }
 
 /* 追従CTA */
@@ -204,6 +229,7 @@ a{ text-decoration:none; color:inherit; }
        ============================================================ -->
   <section class="fv">
     <img src="images/hero/fv.jpg" alt="にっぽん津々浦々 リニューアルキャンペーン 8/14スタート">
+    <div class="fv-confetti" id="fvConfetti" aria-hidden="true"></div>
   </section>
 
   <!-- 限定バッジ + カウントダウン -->
@@ -251,7 +277,11 @@ a{ text-decoration:none; color:inherit; }
         <span class="set-no">SET 01</span>
         <p class="set-catch">はじめましてのあなたに！</p>
         <h3 class="set-name">もっと料理が好きになる<br>基礎調味料（さしすせそ）セット</h3>
-        <div class="set-price"><span class="yen">2,500<span class="tax" style="font-weight:400;">円</span></span><span class="free">送料無料</span></div>
+        <div class="special-price">
+          <span class="sp-label">SPECIAL PRICE ｜ 超お得</span>
+          <div class="sp-price"><span class="sp-num">2,500</span><span class="sp-yen">円</span><span class="sp-tax">(税込)</span></div>
+          <span class="sp-free">送料無料</span>
+        </div>
         <p class="set-desc">お料理の基本「さ・し・す・せ・そ（砂糖・塩・酢・醤油・味噌）」。毎日使うものだからこそ、美味しく、使いやすく、安心できるものを。全国のつくり手が丹精込めた調味料が、いつもの味をワンランク上の豊かな味わいへ導きます。</p>
 
         <p class="contents-ttl"><span>セット内容（全5点）</span></p>
@@ -273,7 +303,11 @@ a{ text-decoration:none; color:inherit; }
         <span class="set-no">SET 02</span>
         <p class="set-catch">お料理好きのあなたに！</p>
         <h3 class="set-name">スタッフ厳選 一度は使ってみたい<br>極み調味料 三選セット</h3>
-        <div class="set-price"><span class="yen">3,500<span class="tax" style="font-weight:400;">円</span></span><span class="free">送料無料</span></div>
+        <div class="special-price">
+          <span class="sp-label">SPECIAL PRICE ｜ 超お得</span>
+          <div class="sp-price"><span class="sp-num">3,500</span><span class="sp-yen">円</span><span class="sp-tax">(税込)</span></div>
+          <span class="sp-free">送料無料</span>
+        </div>
         <p class="set-desc">日々キッチンに立つ皆様へ。当店スタッフが自信を持っておすすめする「醤油・みりん・料理酒」の3点。素材本来の旨味を引き出し、奥深いコクを与える調味料が、和食はもちろん様々なお料理の楽しさを広げます。ギフトにもおすすめです。</p>
 
         <p class="contents-ttl"><span>セット内容（全3点）</span></p>
@@ -350,6 +384,43 @@ function updateCountdown(){
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+/* ===================== FVの紙吹雪 ===================== */
+(function(){
+  const layer = document.getElementById('fvConfetti');
+  if(!layer) return;
+  const colors = ['#EF8299','#FCE24C','#E56A85','#FFFFFF','#F9DBE0','#242017'];
+  const shapes = ['circle','rect','heart','heart'];
+  const COUNT = 34;
+
+  function build(){
+    const w = layer.offsetWidth, h = layer.offsetHeight || 400;
+    layer.innerHTML = '';
+    for(let i=0;i<COUNT;i++){
+      const p = document.createElement('span');
+      p.className = 'confetti-piece';
+      const shape = shapes[Math.floor(Math.random()*shapes.length)];
+      const color = colors[Math.floor(Math.random()*colors.length)];
+      const size = 8 + Math.random()*9;
+      p.style.left = (Math.random()*100) + '%';
+      if(shape==='circle'){ p.style.width=size+'px'; p.style.height=size+'px'; p.style.background=color; p.style.borderRadius='50%'; }
+      else if(shape==='rect'){ p.style.width=size+'px'; p.style.height=(size*0.5)+'px'; p.style.background=color; p.style.borderRadius='2px'; }
+      else { p.textContent='♥'; p.style.color=color; p.style.fontSize=(size+4)+'px'; p.style.lineHeight='1'; }
+      p.style.setProperty('--dx', (Math.random()*80-40).toFixed(0)+'px');
+      p.style.setProperty('--dy', (h + 40).toFixed(0)+'px');
+      p.style.setProperty('--dr', (Math.random()*720-360).toFixed(0)+'deg');
+      p.style.animationDuration = (2.4 + Math.random()*1.8) + 's';
+      p.style.animationDelay = (Math.random()*1.2) + 's';
+      layer.appendChild(p);
+    }
+  }
+  function play(){ build(); layer.classList.remove('is-play'); void layer.offsetWidth; layer.classList.add('is-play'); }
+
+  window.addEventListener('load', ()=>{
+    play();
+    setInterval(play, 5500);
+  });
+})();
 </script>
 </body>
 </html>
