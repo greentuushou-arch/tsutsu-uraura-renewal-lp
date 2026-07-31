@@ -142,7 +142,8 @@ a{ text-decoration:none; color:inherit; }
   box-shadow:6px 6px 0 rgba(36,32,23,.12);
 }
 .set-card:last-child{ margin-bottom:0; }
-.set-photo{ width:100%; display:block; background:var(--white); }
+.set-photo-wrap{ padding:16px 16px 0; background:var(--card); }
+.set-photo{ width:100%; display:block; background:var(--white); border-radius:14px; }
 .set-body{ padding:24px 22px 26px; }
 .set-head{ display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
 .set-no{
@@ -330,7 +331,7 @@ a{ text-decoration:none; color:inherit; }
 
     <!-- セット① -->
     <article class="set-card">
-      <img src="images/sets/set1.jpg" alt="お試し さ・し・す・せ・そ セット" class="set-photo">
+      <div class="set-photo-wrap"><img src="images/sets/set1.jpg" alt="お試し さ・し・す・せ・そ セット" class="set-photo"></div>
       <div class="set-body">
         <div class="set-head">
           <span class="set-no">SET 01</span>
@@ -360,7 +361,7 @@ a{ text-decoration:none; color:inherit; }
 
     <!-- セット② -->
     <article class="set-card">
-      <img src="images/sets/set2.jpg" alt="極み調味料三選セット 料理酒・醤油・みりん" class="set-photo">
+      <div class="set-photo-wrap"><img src="images/sets/set2.jpg" alt="極み調味料三選セット 料理酒・醤油・みりん" class="set-photo"></div>
       <div class="set-body">
         <div class="set-head">
           <span class="set-no">SET 02</span>
