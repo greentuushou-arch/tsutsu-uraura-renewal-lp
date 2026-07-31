@@ -13,6 +13,7 @@
 <style>
 :root{
   --paper:#ECE5D1;
+  --paper-outer:#DBD0AF;
   --paper-2:#F5F0E1;
   --card:#FBF8EF;
   --ink:#242017;
@@ -27,7 +28,7 @@
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
-  margin:0; background:var(--paper); color:var(--ink);
+  margin:0; background:var(--paper-outer); color:var(--ink);
   font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
   -webkit-font-smoothing:antialiased; line-height:1.85;
 }
@@ -36,10 +37,13 @@ a{ text-decoration:none; color:inherit; }
 .maru{ font-family:"Noto Sans JP",sans-serif; }
 
 /* 背景 */
-.bg-pattern{ position:fixed; inset:0; z-index:-1; background:var(--paper); }
+.bg-pattern{ position:fixed; inset:0; z-index:-1; background:var(--paper-outer); }
 
 /* レイアウト */
-.wrap{ max-width:760px; margin:0 auto; background:var(--paper); position:relative; }
+.wrap{
+  max-width:760px; margin:0 auto; background:var(--paper); position:relative;
+  box-shadow:0 0 40px rgba(36,32,23,.14);
+}
 .inner{ padding:52px 24px; }
 .eyebrow{
   display:flex; align-items:center; justify-content:center; gap:10px;
@@ -72,23 +76,29 @@ a{ text-decoration:none; color:inherit; }
 }
 .band-pink{ background:var(--pink); color:var(--white); }
 .band-cream{ background:var(--paper-2); color:var(--ink); }
+.campaign-band{
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  padding:28px 20px 30px; text-align:center;
+}
+.campaign-eyebrow{ font-size:.72rem; font-weight:700; letter-spacing:.18em; opacity:.95; }
+.campaign-heading{ font-size:1.4rem; font-weight:900; letter-spacing:.02em; line-height:1.55; }
 
 /* 日替わりスケジュール */
 .daily-intro{ max-width:600px; margin:0 auto; padding:22px 20px 4px; }
 .daily-row{
   display:flex; align-items:center; gap:14px; background:var(--card);
-  border:2.5px solid var(--ink); border-radius:16px; padding:14px 16px; margin-bottom:14px;
+  border:2.5px solid var(--ink); border-radius:16px; padding:16px 18px; margin-bottom:14px;
   box-shadow:5px 5px 0 rgba(36,32,23,.12);
 }
 .daily-row:last-child{ margin-bottom:0; }
 .daily-num{
-  flex:none; width:36px; height:36px; border-radius:50%; background:var(--yellow); color:var(--ink);
-  border:2px solid var(--ink); font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1rem;
+  flex:none; width:42px; height:42px; border-radius:50%; background:var(--yellow); color:var(--ink);
+  border:2px solid var(--ink); font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.1rem;
   display:flex; align-items:center; justify-content:center;
 }
-.daily-text{ display:flex; flex-direction:column; gap:2px; }
-.daily-date{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:.86rem; color:var(--pink-deep); letter-spacing:.02em; }
-.daily-set{ font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.88rem; color:var(--ink); }
+.daily-text{ display:flex; flex-direction:column; gap:3px; }
+.daily-date{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.3rem; color:var(--pink-deep); letter-spacing:.01em; line-height:1.3; }
+.daily-set{ font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.8rem; color:var(--ink-soft); }
 
 /* ファーストビュー */
 .fv{ position:relative; overflow:hidden; }
@@ -103,17 +113,8 @@ a{ text-decoration:none; color:inherit; }
   100%{ transform:translate(var(--dx), var(--dy)) rotate(var(--dr)); opacity:0; }
 }
 
-/* 販売開始・限定バッジ + カウントダウン */
+/* 販売開始カウントダウン */
 .launch{ padding:34px 24px 8px; text-align:center; }
-.limited-badge{
-  display:inline-flex; flex-direction:column; align-items:center; justify-content:center;
-  width:130px; height:130px; border-radius:50%; background:var(--pink); color:var(--white);
-  font-family:"Noto Sans JP",sans-serif; transform:rotate(-6deg); margin-bottom:20px;
-  box-shadow:0 8px 20px rgba(229,106,133,.35);
-}
-.limited-badge b{ font-size:.72rem; font-weight:700; letter-spacing:.04em; }
-.limited-badge .num{ font-size:2.4rem; font-weight:900; line-height:1; margin:1px 0; }
-.limited-badge small{ font-size:.72rem; font-weight:700; }
 .countdown{
   max-width:440px; margin:0 auto; background:var(--card); border:1px solid var(--line);
   border-radius:16px; padding:14px 16px;
@@ -275,9 +276,6 @@ a{ text-decoration:none; color:inherit; }
 
   <!-- 限定バッジ + カウントダウン -->
   <div class="launch">
-    <span class="limited-badge">
-      <b>先着</b><span class="num">100</span><small>セット限定</small>
-    </span>
     <div class="countdown">
       <p class="cd-label" id="cdLabel">キャンペーン開始まで</p>
       <div class="cd-timer" id="cdTimer">--<span class="u">日</span>--<span class="u">時間</span></div>
@@ -299,7 +297,10 @@ a{ text-decoration:none; color:inherit; }
     </div>
   </section>
 
-  <div class="band band-pink">日替わり！先着100名様</div>
+  <div class="band band-pink campaign-band">
+    <span class="campaign-eyebrow">リニューアルキャンペーン</span>
+    <span class="campaign-heading">日替わり先着100名様<br>限定セット</span>
+  </div>
   <div class="daily-intro">
     <div class="daily-row">
       <span class="daily-num">①</span>
