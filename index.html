@@ -40,8 +40,13 @@ a{ text-decoration:none; color:inherit; }
 /* カタカナ語・数字＋助数詞などが行途中で分断されないようにする */
 .nowrap{ white-space:nowrap; }
 
-/* 背景 */
+/* 背景（わら半紙のようなざらっとした質感を、さりげなく重ねる） */
 .bg-pattern{ position:fixed; inset:0; z-index:-1; background:var(--paper-outer); }
+.bg-pattern::after{
+  content:''; position:absolute; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:.22; mix-blend-mode:multiply;
+}
 
 /* レイアウト */
 .wrap{
@@ -120,16 +125,16 @@ a{ text-decoration:none; color:inherit; }
 .intro{ padding:60px 26px 50px; }
 .intro-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:28px; }
 .intro-card{ display:block; }
-.intro-card img{ width:100%; border-radius:10px; border:1.5px solid var(--pink-deep); }
+.intro-card img{ width:100%; border-radius:10px; border:2.5px solid var(--pink-deep); }
 .intro-cap{ margin-top:10px; text-align:center; font-size:.84rem; font-weight:700; color:var(--ink); line-height:1.5; }
 .intro-cap .n{ display:inline-block; width:22px; height:22px; border-radius:50%; background:var(--yellow); border:1px solid var(--pink-deep); font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:.72rem; line-height:20px; margin-right:5px; }
-.intro-total-wrap{ display:flex; justify-content:center; margin-top:32px; }
+.intro-total-wrap{ display:flex; justify-content:center; margin-top:32px; padding:0 4px; }
 .intro-total{
-  display:inline-flex; flex-direction:column; align-items:center; text-align:center;
-  background:var(--pink-deep); border-radius:18px; padding:18px 40px 20px;
+  display:inline-block; max-width:100%; text-align:center;
+  background:var(--pink-deep); border-radius:999px; padding:16px 24px;
+  font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.3rem; color:var(--paper); white-space:nowrap;
 }
-.intro-total .big{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:4.2rem; line-height:.85; font-style:italic; color:var(--yellow); }
-.intro-total .label{ display:block; margin-top:8px; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.15rem; letter-spacing:.06em; color:var(--paper); }
+.intro-total .big{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:1.65em; font-style:italic; color:var(--yellow); }
 
 /* キャンペーンの流れ（タイムライン） */
 .schedule{ background:var(--pink-deep); padding:60px 26px 54px; }
@@ -156,7 +161,7 @@ a{ text-decoration:none; color:inherit; }
 .coupon-wrap:nth-child(1){ transform:rotate(-1.2deg); }
 .coupon-wrap:nth-child(2){ transform:rotate(1.1deg); }
 .coupon-card{
-  position:relative; display:flex; flex-direction:column; background:var(--card); border:2px solid var(--pink-deep); border-radius:10px; overflow:hidden;
+  position:relative; display:flex; flex-direction:column; background:var(--card); border:3px solid var(--pink-deep); border-radius:10px; overflow:hidden;
   box-shadow:7px 7px 0 rgba(34,30,22,.16);
 }
 .coupon-get{
@@ -219,7 +224,7 @@ a{ text-decoration:none; color:inherit; }
 .sets-body{ padding:44px 18px 0; }
 .set-card{
   max-width:600px; margin:0 auto 34px; background:var(--card);
-  border:1.5px solid var(--pink-deep); border-radius:10px; overflow:hidden;
+  border:2.5px solid var(--pink-deep); border-radius:10px; overflow:hidden;
 }
 .set-card:last-child{ margin-bottom:0; }
 .set-photo-wrap{ padding:16px 16px 0; background:var(--card); }
@@ -319,7 +324,7 @@ a{ text-decoration:none; color:inherit; }
 
 @media screen and (max-width:420px){
   .intro-grid{ gap:10px; }
-  .intro-total .big{ font-size:3.4rem; }
+  .intro-total{ font-size:1.05rem; padding:14px 16px; }
 }
 
 @media screen and (min-width:768px){
@@ -328,7 +333,44 @@ a{ text-decoration:none; color:inherit; }
   .phase-heading{ font-size:2.1rem; }
   .tagline{ font-size:2.3rem; }
   .t-date-big{ font-size:3.6rem; }
-  .intro-total .big{ font-size:4.8rem; }
+  .intro-total{ font-size:1.7rem; padding:20px 36px; }
+
+  /* 小さな説明文字はPCでは少し大きく読みやすいサイズに */
+  .header-tag{ font-size:.76rem; }
+  .notice-strip{ font-size:1.02rem; }
+  .cd-label{ font-size:1.02rem; }
+  .sec-lead{ font-size:1.18rem; }
+  .intro-cap{ font-size:.94rem; }
+  .t-date-small{ font-size:1.18rem; }
+  .t-desc{ font-size:1.16rem; }
+  .t-desc .tag{ font-size:.78rem; }
+  .schedule-note{ font-size:.94rem; }
+  .coupon-cond{ font-size:1.04rem; }
+  .coupon-start{ font-size:.88rem; }
+  .coupon-note{ font-size:.9rem; }
+  .coupon-get{ font-size:.82rem; }
+  .phase-heading .small{ font-size:.96rem; }
+  .set-catch{ font-size:1.1rem; }
+  .set-desc{ font-size:1.06rem; }
+  .set-release{ font-size:1.02rem; }
+  .set-no{ font-size:.88rem; }
+  .contents-ttl{ font-size:.94rem; }
+  .contents-note{ font-size:.86rem; }
+  .contents-list .c-name{ font-size:.98rem; }
+  .set-note{ font-size:.86rem; }
+  .special-price .sp-label{ font-size:.84rem; }
+  .special-price .sp-tax{ font-size:.82rem; }
+  .special-price .sp-free{ font-size:.86rem; }
+  .brand-body p{ font-size:1.1rem; }
+  .brand-illust-cap{ font-size:.74rem; }
+  .brand-fineprint{ font-size:.86rem; }
+  .note-tag{ font-size:.76rem; }
+  .note-card blockquote{ font-size:1.04rem; }
+  .note-card figcaption{ font-size:.84rem; }
+  .notices-ttl{ font-size:.96rem; }
+  .notices li{ font-size:.84rem; }
+  .footer{ font-size:.9rem; }
+  .footer .fop{ font-size:.8rem; }
 }
 </style>
 </head>
@@ -386,7 +428,7 @@ a{ text-decoration:none; color:inherit; }
       </a>
     </div>
     <div class="intro-total-wrap">
-      <div class="intro-total"><span class="big jf">100</span><span class="label">個限定販売</span></div>
+      <div class="intro-total">各種限定<span class="big jf">50</span>個販売！</div>
     </div>
   </section>
 
@@ -608,7 +650,7 @@ a{ text-decoration:none; color:inherit; }
     <p class="fbrand">にっぽん津々浦々</p>
     <p class="tagline" style="color:var(--paper); margin-top:8px;">好きをくまなく。</p>
     <p style="margin-top:12px;"><a href="https://www.rakuten.co.jp/tsutsu-uraura/" target="_blank" rel="noopener">ショップトップページへ →</a></p>
-    <p class="fop">運営：株式会社スペースアイランド（茨城県つくば市／代表取締役：小崎雅俊）</p>
+    <p class="fop">運営：株式会社スペースアイランド</p>
   </section>
 
 </div>
