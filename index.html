@@ -37,9 +37,8 @@ body{
 img{ max-width:100%; display:block; }
 a{ text-decoration:none; color:inherit; }
 .jf{ font-family:"Josefin Sans",sans-serif; }
-/* スマホ幅のみで改行したい箇所に使う（768px以上では改行しない） */
-.sp{ display:inline; }
-@media screen and (min-width:768px){ .sp{ display:none; } }
+/* カタカナ語・数字＋助数詞などが行途中で分断されないようにする */
+.nowrap{ white-space:nowrap; }
 
 /* 背景 */
 .bg-pattern{ position:fixed; inset:0; z-index:-1; background:var(--paper-outer); }
@@ -61,7 +60,7 @@ a{ text-decoration:none; color:inherit; }
 .eyebrow.center::after{ content:''; height:2px; width:32px; background:var(--pink); opacity:.8; }
 .sec-title{
   font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900;
-  font-size:2.4rem; line-height:1.35; color:var(--ink); margin:0 0 20px; letter-spacing:0;
+  font-size:2.1rem; line-height:1.45; color:var(--ink); margin:0 0 20px; letter-spacing:0;
 }
 .sec-title .pink{ color:var(--pink-deep); }
 .sec-lead{ font-size:1.08rem; color:var(--ink-soft); margin:0; max-width:560px; line-height:1.8; }
@@ -157,7 +156,7 @@ a{ text-decoration:none; color:inherit; }
 .coupon-wrap:nth-child(1){ transform:rotate(-1.2deg); }
 .coupon-wrap:nth-child(2){ transform:rotate(1.1deg); }
 .coupon-card{
-  position:relative; display:flex; background:var(--card); border:2px solid var(--ink); border-radius:10px; overflow:hidden;
+  position:relative; display:flex; flex-direction:column; background:var(--card); border:2px solid var(--ink); border-radius:10px; overflow:hidden;
   box-shadow:7px 7px 0 rgba(34,30,22,.16);
 }
 .coupon-get{
@@ -165,33 +164,45 @@ a{ text-decoration:none; color:inherit; }
   font-size:.74rem; letter-spacing:.08em; color:var(--ink); background:var(--yellow); border:1.5px solid var(--ink);
   border-radius:999px; padding:5px 16px;
 }
-.coupon-main{ flex:1; min-width:0; padding:30px 20px 22px; }
-.coupon-head{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+.coupon-main{ padding:32px 22px 24px; }
+.coupon-head{ display:flex; align-items:center; gap:10px; margin-bottom:12px; }
 .coupon-num{
   flex:none; width:40px; height:40px; border-radius:50%; background:var(--yellow); color:var(--ink);
   font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:1.02rem;
   display:flex; align-items:center; justify-content:center;
 }
-.coupon-name{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.5rem; color:var(--ink); margin:0; }
-.coupon-cond{ font-size:.96rem; color:var(--ink-soft); line-height:1.75; margin:0; }
-.coupon-start{ margin-top:14px; font-size:.8rem; color:var(--ink-soft); border-top:1px dashed var(--line); padding-top:10px; }
+.coupon-name{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.4rem; color:var(--ink); margin:0; }
+.coupon-cond{ font-size:.94rem; color:var(--ink-soft); line-height:1.8; margin:0; }
+.coupon-start{ margin-top:16px; font-size:.8rem; color:var(--ink-soft); border-top:1px dashed var(--line); padding-top:12px; }
 .coupon-start .d{ font-family:"Josefin Sans",sans-serif; font-weight:600; color:var(--ink); }
 .coupon-stub{
-  flex:none; width:150px; position:relative; background:var(--pink-deep);
-  border-left:2px dashed var(--ink); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0; padding:14px 8px;
+  position:relative; background:var(--pink-deep);
+  border-top:2px dashed var(--ink); display:flex; flex-direction:row; align-items:baseline; justify-content:center; gap:10px; padding:18px 14px;
 }
 .coupon-stub::before,.coupon-stub::after{
-  content:''; position:absolute; left:-11px; width:22px; height:22px; border-radius:50%; background:var(--card);
+  content:''; position:absolute; top:-11px; width:22px; height:22px; border-radius:50%; background:var(--card);
 }
-.coupon-stub::before{ top:-11px; }
-.coupon-stub::after{ bottom:-11px; }
-.coupon-off{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-style:italic; font-size:3.1rem; color:var(--white); line-height:1; white-space:nowrap; }
-.coupon-off .yen{ font-size:1.15rem; font-style:normal; }
-.coupon-offtext{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.05rem; color:var(--yellow); letter-spacing:.06em; margin-top:4px; }
+.coupon-stub::before{ left:-11px; }
+.coupon-stub::after{ right:-11px; }
+.coupon-off{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-style:italic; font-size:2.7rem; color:var(--white); line-height:1; white-space:nowrap; }
+.coupon-off .yen{ font-size:1.1rem; font-style:normal; }
+.coupon-offtext{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.05rem; color:var(--yellow); letter-spacing:.06em; }
 .coupon-note{ max-width:560px; margin:26px auto 0; font-size:.82rem; color:var(--ink); opacity:.8; text-align:center; }
 .coupon-cta{
-  display:block; margin-top:16px; text-align:center; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700;
-  font-size:.96rem; color:var(--white); background:var(--ink); border-radius:999px; padding:14px 16px;
+  display:block; margin-top:18px; text-align:center; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700;
+  font-size:.96rem; color:var(--white); background:var(--ink); border-radius:999px; padding:15px 16px;
+}
+
+@media screen and (min-width:640px){
+  .coupon-card{ flex-direction:row; }
+  .coupon-main{ flex:1; min-width:0; }
+  .coupon-stub{
+    flex:none; width:150px; flex-direction:column; justify-content:center;
+    border-top:none; border-left:2px dashed var(--ink);
+  }
+  .coupon-stub::before{ left:-11px; top:-11px; }
+  .coupon-stub::after{ right:auto; left:-11px; top:auto; bottom:-11px; }
+  .coupon-off{ font-size:3.1rem; }
 }
 
 /* 限定セット */
@@ -307,11 +318,6 @@ a{ text-decoration:none; color:inherit; }
 .footer .fop{ font-size:.72rem; opacity:.7; margin-top:14px; }
 
 @media screen and (max-width:420px){
-  .coupon-stub{ width:124px; padding:12px 4px; }
-  .coupon-off{ font-size:2.5rem; }
-  .coupon-offtext{ font-size:.9rem; }
-  .coupon-name{ font-size:1.28rem; }
-  .coupon-main{ padding:30px 16px 20px; }
   .intro-grid{ gap:10px; }
   .intro-total .big{ font-size:3.4rem; }
 }
@@ -367,8 +373,8 @@ a{ text-decoration:none; color:inherit; }
        ============================================================ -->
   <section class="intro" id="intro">
     <span class="eyebrow jf">SEP 1 TUE — SEP 4 FRI</span>
-    <h1 class="sec-title">9/1（火）〜4（金）限定<br class="sp">新しい「好き」に<br class="sp">出会う<span class="pink">キャンペーン</span></h1>
-    <p class="sec-lead">ブランドリニューアルを記念して、スタッフが厳選した調味料セット2種を計100個限定で。<br class="sp">日頃のご愛顧に感謝を込めた記念クーポンも配布します。</p>
+    <h1 class="sec-title">9/1（火）〜4（金）限定<br>新しい「好き」に<br>出会う<span class="pink nowrap">キャンペーン</span></h1>
+    <p class="sec-lead">ブランドリニューアルを記念して、スタッフが厳選した調味料セット2種を計100個限定で。日頃のご愛顧に感謝を込めた記念クーポンも配布します。</p>
     <div class="intro-grid">
       <a class="intro-card" href="#set1">
         <img src="images/sets/set1.jpg" alt="「さ・し・す・せ・そ」セット">
@@ -390,7 +396,7 @@ a{ text-decoration:none; color:inherit; }
   <section class="schedule" id="schedule">
     <div class="inner center-block" style="padding-bottom:0;">
       <span class="eyebrow center jf">CAMPAIGN SCHEDULE</span>
-      <h2 class="sec-title">キャンペーン<br class="sp">スケジュール</h2>
+      <h2 class="sec-title"><span class="nowrap">キャンペーン</span><br>スケジュール</h2>
     </div>
     <div class="timeline">
       <div class="t-item">
@@ -424,7 +430,7 @@ a{ text-decoration:none; color:inherit; }
   <section class="coupons" id="coupon">
     <div class="inner" style="padding-bottom:0;">
       <span class="eyebrow jf">THANKS FOR YOUR SUPPORT</span>
-      <h2 class="sec-title">感謝を込めた<br>記念クーポン<br class="sp">2種</h2>
+      <h2 class="sec-title">感謝を込めた<br>記念クーポン<span class="nowrap">2種</span></h2>
       <p class="sec-lead">配布・利用期間は9月1日(火)10:00〜9月4日(金)9:59。期間中はいつでも獲得・ご利用いただけます。</p>
     </div>
     <div class="coupon-list">
@@ -434,7 +440,7 @@ a{ text-decoration:none; color:inherit; }
           <div class="coupon-main">
             <div class="coupon-head">
               <span class="coupon-num jf">39</span>
-              <p class="coupon-name">サンキュー(39)クーポン</p>
+              <p class="coupon-name">サンキュー(39)<span class="nowrap">クーポン</span></p>
             </div>
             <p class="coupon-cond">いつもご愛顧いただいている感謝を込めて。<br>税込3,900円以上のお買い物でご利用いただけます。</p>
             <p class="coupon-start">配布・利用期間 <span class="d jf">9/1(火)10:00〜9/4(金)9:59</span></p>
@@ -452,7 +458,7 @@ a{ text-decoration:none; color:inherit; }
           <div class="coupon-main">
             <div class="coupon-head">
               <span class="coupon-num jf">八</span>
-              <p class="coupon-name">末広がりの「八」クーポン</p>
+              <p class="coupon-name">末広がりの「八」<span class="nowrap">クーポン</span></p>
             </div>
             <p class="coupon-cond">これからも選ばれるブランドへの願いを込めて。<br>税込8,000円以上のお買い物でご利用いただけます。</p>
             <p class="coupon-start">配布・利用期間 <span class="d jf">9/1(火)10:00〜9/4(金)9:59</span></p>
@@ -474,7 +480,7 @@ a{ text-decoration:none; color:inherit; }
   <section class="sets" id="sets">
     <div class="phase-band">
       <span class="eyebrow center jf">STAFF SELECTION</span>
-      <span class="phase-heading">スタッフ厳選！<br class="sp">新しい「好き」に<br>出会える調味料セット2種<span class="small jf">TOTAL 100 LIMITED</span></span>
+      <span class="phase-heading">スタッフ厳選！<br>新しい「好き」に<br>出会える調味料<span class="nowrap">セット2種</span><span class="small jf">TOTAL 100 LIMITED</span></span>
     </div>
 
     <div class="sets-body">
@@ -545,7 +551,7 @@ a{ text-decoration:none; color:inherit; }
        ============================================================ -->
   <section class="brand">
     <span class="eyebrow jf">OUR STORY</span>
-    <h2 class="sec-title">「好きをくまなく。」<br>今、そして<br>次世代のお客様からも、<br>さらに愛される<br class="sp">ブランドへ。</h2>
+    <h2 class="sec-title"><span class="nowrap">「好きをくまなく。」</span><br>今、そして次世代のお客様からも、<br>さらに愛される<span class="nowrap">ブランド</span>へ。</h2>
     <div class="brand-illust">
       <img src="images/brand/kumanaku.jpg" alt="好きをくまなく。 にっぽん津々浦々の約束">
       <p class="brand-illust-cap">illustration: yamyam</p>
@@ -562,7 +568,7 @@ a{ text-decoration:none; color:inherit; }
   <section class="staff-voice">
     <div class="inner center-block" style="padding-bottom:0;">
       <span class="eyebrow center jf">STAFF'S VOICE</span>
-      <h2 class="sec-title">キャンペーン2商品を<br>スタッフが<br class="sp">選んだ理由</h2>
+      <h2 class="sec-title"><span class="nowrap">キャンペーン2商品を</span><br>スタッフが選んだ理由</h2>
     </div>
     <div class="staff-grid">
       <figure class="note-card">
