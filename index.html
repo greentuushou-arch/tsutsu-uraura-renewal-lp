@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -36,7 +36,7 @@ body{
 }
 img{ max-width:100%; display:block; }
 a{ text-decoration:none; color:inherit; }
-.jf{ font-family:"Josefin Sans",sans-serif; }
+.jf{ font-family:"Rubik",sans-serif; }
 /* カタカナ語・数字＋助数詞などが行途中で分断されないようにする */
 .nowrap{ white-space:nowrap; }
 
@@ -56,7 +56,7 @@ a{ text-decoration:none; color:inherit; }
 .inner{ padding:56px 26px; }
 .eyebrow{
   display:flex; align-items:center; gap:10px;
-  font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:.92rem;
+  font-family:"Rubik",sans-serif; font-weight:700; font-size:.92rem;
   letter-spacing:.18em; color:var(--pink-deep); margin:0 0 16px;
 }
 .eyebrow::before{ content:''; height:2px; width:32px; background:var(--pink); opacity:.8; }
@@ -65,7 +65,7 @@ a{ text-decoration:none; color:inherit; }
 .eyebrow.center::after{ content:''; height:2px; width:32px; background:var(--pink); opacity:.8; }
 /* 大きく飾りのように見せる英字見出し（スケジュール／クーポン） */
 .eyebrow-deco{
-  display:block; font-family:"Josefin Sans",sans-serif; font-weight:700; font-style:italic;
+  display:block; font-family:"Rubik",sans-serif; font-weight:700; font-style:italic;
   font-size:2.1rem; line-height:1.05; letter-spacing:.01em; color:var(--white); margin:0 0 10px;
 }
 .sec-title{
@@ -73,7 +73,7 @@ a{ text-decoration:none; color:inherit; }
   font-size:2.1rem; line-height:1.45; color:var(--ink); margin:0 0 20px; letter-spacing:0;
 }
 .sec-title .pink{ color:var(--pink-deep); }
-.sec-lead{ font-size:1.08rem; color:var(--ink-soft); margin:0; line-height:1.8; }
+.sec-lead{ font-size:1.08rem; color:var(--ink); font-weight:500; margin:0; line-height:1.8; }
 .center-block{ text-align:center; }
 .center-block .sec-lead{ max-width:560px; margin-left:auto; margin-right:auto; }
 
@@ -84,7 +84,7 @@ a{ text-decoration:none; color:inherit; }
 }
 .header-inner{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; padding:14px 20px; }
 .header-brand{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.14rem; color:var(--ink); letter-spacing:.04em; }
-.header-tag{ font-family:"Josefin Sans",sans-serif; font-size:.66rem; color:var(--pink-soft); font-weight:700; letter-spacing:.1em; }
+.header-tag{ font-family:"Rubik",sans-serif; font-size:.66rem; color:var(--pink-soft); font-weight:700; letter-spacing:.1em; }
 .header-spacer{ height:50px; }
 
 /* ファーストビュー */
@@ -104,7 +104,7 @@ a{ text-decoration:none; color:inherit; }
   position:absolute; left:77.5%; top:49%; width:19%; z-index:4;
   display:flex; flex-direction:column; align-items:flex-start; pointer-events:none;
 }
-.fv-date .fd-num{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-style:italic; font-size:clamp(1.7rem,7vw,2.7rem); line-height:.9; color:var(--ink); }
+.fv-date .fd-num{ font-family:"Rubik",sans-serif; font-weight:700; font-style:italic; font-size:clamp(1.7rem,7vw,2.7rem); line-height:.9; color:var(--ink); }
 .fv-date .fd-rule{ width:60%; height:2px; background:var(--ink); margin:.4em 0 .38em; }
 .fv-date .fd-sub{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:clamp(.48rem,1.5vw,.62rem); letter-spacing:.05em; color:var(--ink); line-height:1.4; }
 
@@ -114,17 +114,17 @@ a{ text-decoration:none; color:inherit; }
   font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.94rem;
   letter-spacing:.01em; padding:18px 16px; line-height:1.85;
 }
-.notice-strip .num{ font-family:"Josefin Sans",sans-serif; font-weight:600; color:var(--ink); white-space:nowrap; }
+.notice-strip .num{ font-family:"Rubik",sans-serif; font-weight:600; color:var(--white); white-space:nowrap; }
 
 /* カウントダウン */
 .launch{ padding:34px 24px 10px; text-align:center; }
 .countdown{
-  max-width:460px; margin:0 auto; background:var(--pink-deep); border:1px solid var(--pink-deep);
+  max-width:460px; margin:0 auto; background:var(--pink-soft); border:1px solid var(--pink-soft);
   border-radius:10px; padding:20px 18px 24px;
 }
-.cd-label{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.96rem; color:var(--yellow); margin:0 0 12px; letter-spacing:.02em; }
-.cd-timer{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:2.5rem; color:var(--paper); letter-spacing:0; }
-.cd-timer .u{ font-family:"Zen Kaku Gothic New",sans-serif; font-size:.66rem; font-weight:700; color:var(--paper); opacity:.65; margin:0 8px 0 2px; }
+.cd-label{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.96rem; color:var(--pink-deep); margin:0 0 12px; letter-spacing:.02em; }
+.cd-timer{ font-family:"Rubik",sans-serif; font-weight:700; font-size:2.5rem; color:var(--white); letter-spacing:0; }
+.cd-timer .u{ font-family:"Zen Kaku Gothic New",sans-serif; font-size:.66rem; font-weight:700; color:var(--ink); margin:0 8px 0 2px; }
 
 /* 小見出し①：キャンペーン概要 + セット写真プレビュー */
 .intro{ padding:60px 26px 50px; }
@@ -132,35 +132,34 @@ a{ text-decoration:none; color:inherit; }
 .intro-card{ display:block; }
 .intro-card img{ width:100%; border-radius:10px; border:4px solid var(--pink-deep); }
 .intro-cap{ margin-top:10px; text-align:center; font-size:.84rem; font-weight:700; color:var(--ink); line-height:1.5; }
-.intro-cap .n{ display:inline-block; width:22px; height:22px; border-radius:50%; background:var(--yellow); border:1px solid var(--pink-deep); font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:.72rem; line-height:20px; margin-right:5px; }
+.intro-cap .n{ display:inline-block; width:22px; height:22px; border-radius:50%; background:var(--yellow); border:1px solid var(--pink-deep); font-family:"Rubik",sans-serif; font-weight:700; font-size:.72rem; line-height:20px; margin-right:5px; }
 .intro-total-wrap{ display:flex; justify-content:center; margin-top:32px; padding:0 4px; }
 .intro-total{
   display:inline-block; max-width:100%; text-align:center;
   background:var(--pink-deep); border-radius:999px; padding:16px 24px;
   font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.3rem; color:var(--paper); white-space:nowrap;
 }
-.intro-total .big{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:1.65em; font-style:italic; color:var(--yellow); }
+.intro-total .big{ font-family:"Rubik",sans-serif; font-weight:700; font-size:1.65em; font-style:italic; color:var(--yellow); }
 
 /* キャンペーンの流れ（タイムライン） */
-.schedule{ background:var(--pink-deep); padding:60px 26px 54px; }
-.schedule .eyebrow{ color:var(--yellow); }
-.schedule .eyebrow.center::before,.schedule .eyebrow.center::after{ background:var(--yellow); }
-.schedule .sec-title{ color:var(--paper); }
+.schedule{ background:var(--pink-soft); padding:60px 26px 54px; }
+.schedule .sec-title{ color:var(--ink); }
 .timeline{ max-width:560px; margin:36px auto 0; }
-.t-item{ display:flex; align-items:flex-start; gap:16px; padding:26px 0; border-bottom:1px solid rgba(244,238,221,.16); }
+.t-item{ display:flex; align-items:flex-start; gap:16px; padding:26px 0; border-bottom:1px solid rgba(34,30,22,.15); }
 .t-item:first-child{ padding-top:0; }
 .t-item:last-child{ border-bottom:none; padding-bottom:0; }
-.t-index{ flex:none; width:30px; padding-top:.6em; font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:.86rem; color:var(--yellow); opacity:.7; }
+.t-index{ flex:none; width:30px; padding-top:.6em; font-family:"Rubik",sans-serif; font-weight:700; font-size:.86rem; color:var(--ink); }
 .t-main{ flex:1; min-width:0; }
 .t-date-row{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
-.t-date-big{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-style:italic; font-size:3.2rem; line-height:1; color:var(--yellow); }
-.t-date-small{ font-family:"Josefin Sans",sans-serif; font-weight:600; font-size:1.1rem; color:var(--paper); opacity:.9; }
-.t-desc{ font-size:1.08rem; color:var(--paper); margin-top:10px; line-height:1.65; }
-.t-desc .tag{ display:inline-block; font-size:.7rem; font-weight:700; color:var(--ink); background:var(--yellow); border-radius:999px; padding:3px 12px; margin-left:8px; letter-spacing:.02em; }
-.schedule-note{ max-width:560px; margin:28px auto 0; font-size:.86rem; color:var(--paper); opacity:.75; text-align:center; }
+.t-date-big{ font-family:"Rubik",sans-serif; font-weight:700; font-style:italic; font-size:3.2rem; line-height:1; color:var(--pink-deep); }
+.t-date-small{ font-family:"Rubik",sans-serif; font-weight:600; font-size:1.1rem; color:var(--ink); }
+.t-desc{ font-size:1.08rem; color:var(--ink); font-weight:500; margin-top:10px; line-height:1.65; }
+.t-desc .tag{ display:inline-block; font-size:.7rem; font-weight:700; color:var(--white); background:var(--pink-deep); border-radius:999px; padding:3px 12px; margin-left:8px; letter-spacing:.02em; }
+.schedule-note{ max-width:560px; margin:28px auto 0; font-size:.86rem; color:var(--ink); font-weight:500; text-align:center; }
 
 /* クーポン */
-.coupons{ background:var(--pink-soft); padding:60px 26px 54px; }
+.coupons{ background:var(--yellow); padding:60px 26px 54px; }
+.coupons .eyebrow-deco{ color:var(--pink-deep); }
 .coupon-list{ max-width:560px; margin:32px auto 0; display:flex; flex-direction:column; gap:30px; }
 .coupon-wrap{ position:relative; padding-top:14px; }
 .coupon-wrap:nth-child(1){ transform:rotate(-1.2deg); }
@@ -170,7 +169,7 @@ a{ text-decoration:none; color:inherit; }
   box-shadow:7px 7px 0 rgba(34,30,22,.16);
 }
 .coupon-get{
-  position:absolute; top:0; left:18px; z-index:2; font-family:"Josefin Sans",sans-serif; font-weight:700;
+  position:absolute; top:0; left:18px; z-index:2; font-family:"Rubik",sans-serif; font-weight:700;
   font-size:.74rem; letter-spacing:.08em; color:var(--ink); background:var(--yellow); border:1.5px solid var(--pink-deep);
   border-radius:999px; padding:5px 16px;
 }
@@ -178,15 +177,15 @@ a{ text-decoration:none; color:inherit; }
 .coupon-head{ display:flex; align-items:center; gap:10px; margin-bottom:12px; }
 .coupon-num{
   flex:none; width:40px; height:40px; border-radius:50%; background:var(--yellow); color:var(--ink);
-  font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:1.02rem;
+  font-family:"Rubik",sans-serif; font-weight:700; font-size:1.02rem;
   display:flex; align-items:center; justify-content:center;
 }
 .coupon-num.is-kanji{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; }
 .coupon-name{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.7rem; color:var(--pink-deep); margin:0; line-height:1.2; }
-.coupon-subname{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.8rem; color:var(--ink-soft); margin:2px 0 0; letter-spacing:.02em; }
-.coupon-cond{ font-size:.94rem; color:var(--ink-soft); line-height:1.8; margin:0; }
-.coupon-start{ margin-top:16px; font-size:.8rem; color:var(--ink-soft); border-top:1px dashed var(--line); padding-top:12px; }
-.coupon-start .d{ font-family:"Josefin Sans",sans-serif; font-weight:600; color:var(--ink); white-space:nowrap; }
+.coupon-subname{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.8rem; color:var(--ink); margin:2px 0 0; letter-spacing:.02em; }
+.coupon-cond{ font-size:.94rem; color:var(--ink); font-weight:500; line-height:1.8; margin:0; }
+.coupon-start{ margin-top:16px; font-size:.8rem; color:var(--ink); font-weight:500; border-top:1px dashed var(--line); padding-top:12px; }
+.coupon-start .d{ font-family:"Rubik",sans-serif; font-weight:600; color:var(--ink); white-space:nowrap; }
 .coupon-stub{
   position:relative; background:var(--pink-deep);
   border-top:2px dashed var(--pink-deep); display:flex; flex-direction:row; align-items:baseline; justify-content:center; gap:10px; padding:18px 14px;
@@ -196,10 +195,10 @@ a{ text-decoration:none; color:inherit; }
 }
 .coupon-stub::before{ left:-11px; }
 .coupon-stub::after{ right:-11px; }
-.coupon-off{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-style:italic; font-size:2.7rem; color:var(--white); line-height:1; white-space:nowrap; }
+.coupon-off{ font-family:"Rubik",sans-serif; font-weight:700; font-style:italic; font-size:2.7rem; color:var(--white); line-height:1; white-space:nowrap; }
 .coupon-off .yen{ font-family:"Zen Kaku Gothic New",sans-serif; font-size:1.1rem; font-style:normal; }
 .coupon-offtext{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.05rem; color:var(--yellow); letter-spacing:.06em; }
-.coupon-note{ max-width:560px; margin:26px auto 0; font-size:.82rem; color:var(--ink); opacity:.8; text-align:center; }
+.coupon-note{ max-width:560px; margin:26px auto 0; font-size:.82rem; color:var(--ink); font-weight:500; text-align:center; }
 .coupon-cta{
   display:block; margin-top:18px; text-align:center; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700;
   font-size:.96rem; color:var(--white); background:var(--ink); border-radius:999px; padding:15px 16px;
@@ -226,7 +225,7 @@ a{ text-decoration:none; color:inherit; }
 .phase-band .eyebrow{ color:var(--gold-soft); }
 .phase-band .eyebrow.center::before,.phase-band .eyebrow.center::after{ background:var(--gold-soft); }
 .phase-heading{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.85rem; letter-spacing:.01em; line-height:1.45; }
-.phase-heading .small{ display:block; font-family:"Josefin Sans",sans-serif; font-weight:600; font-size:.88rem; letter-spacing:.1em; color:var(--yellow); margin-top:10px; }
+.phase-heading .small{ display:block; font-family:"Rubik",sans-serif; font-weight:600; font-size:.88rem; letter-spacing:.1em; color:var(--yellow); margin-top:10px; }
 
 .sets-body{ padding:44px 18px 0; }
 .set-card{
@@ -244,20 +243,20 @@ a{ text-decoration:none; color:inherit; }
   padding:5px 16px; letter-spacing:.02em;
 }
 .set-release{
-  display:inline-flex; align-items:center; font-family:"Josefin Sans",sans-serif; font-weight:700;
+  display:inline-flex; align-items:center; font-family:"Rubik",sans-serif; font-weight:700;
   font-size:.94rem; color:var(--ink); background:var(--yellow); border:1.5px solid var(--pink-deep);
   border-radius:999px; padding:6px 16px; letter-spacing:.01em;
 }
 .set-catch{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:1.02rem; color:var(--pink-deep); margin:0 0 8px; }
 .set-name{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.62rem; line-height:1.4; color:var(--ink); margin:0 0 14px; }
-.set-desc{ font-size:.96rem; color:var(--ink-soft); margin:0 0 18px; line-height:1.85; }
+.set-desc{ font-size:.96rem; color:var(--ink); font-weight:500; margin:0 0 18px; line-height:1.85; }
 
 .contents-ttl{
   font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.86rem; color:var(--ink);
   letter-spacing:.06em; margin:0 0 12px; position:relative;
 }
 .contents-ttl span{ background:var(--card); padding-right:12px; position:relative; z-index:1; }
-.contents-note{ font-size:.78rem; color:var(--ink-soft); margin:0 0 14px; }
+.contents-note{ font-size:.78rem; color:var(--ink); font-weight:500; margin:0 0 14px; }
 .contents-list{ list-style:none; margin:0 0 18px; padding:0; }
 .contents-list li{ display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px dashed var(--line); }
 .contents-list li:last-child{ border-bottom:none; }
@@ -275,19 +274,19 @@ a{ text-decoration:none; color:inherit; }
   padding:18px 18px 20px; margin:0 0 18px; text-align:center; color:var(--ink);
 }
 .special-price .sp-label{
-  display:inline-block; font-family:"Josefin Sans",sans-serif; font-weight:700;
+  display:inline-block; font-family:"Rubik",sans-serif; font-weight:700;
   font-size:.76rem; letter-spacing:.14em; color:var(--white); background:var(--ink);
   border-radius:999px; padding:4px 16px; margin-bottom:10px;
 }
 .special-price .sp-price{ display:flex; align-items:baseline; justify-content:center; gap:2px; line-height:1; }
-.special-price .sp-num{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:3.4rem; letter-spacing:-.01em; color:var(--ink); }
+.special-price .sp-num{ font-family:"Rubik",sans-serif; font-weight:700; font-size:3.4rem; letter-spacing:-.01em; color:var(--ink); }
 .special-price .sp-yen{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:1.3rem; }
 .special-price .sp-tax{ font-size:.74rem; opacity:.8; margin-left:6px; align-self:flex-end; margin-bottom:6px; }
 .special-price .sp-free{
   display:inline-block; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.78rem;
   color:var(--ink); background:var(--paper); border-radius:999px; padding:4px 14px; margin-top:10px;
 }
-.set-note{ font-size:.78rem; color:var(--ink-soft); margin:0 0 16px; line-height:1.85; }
+.set-note{ font-size:.78rem; color:var(--ink); font-weight:500; margin:0 0 16px; line-height:1.85; }
 .set-btn{
   display:block; text-align:center; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700;
   font-size:1.08rem; color:var(--white); background:var(--pink-deep); border-radius:999px; padding:16px 20px;
@@ -298,14 +297,14 @@ a{ text-decoration:none; color:inherit; }
 .brand{ background:var(--paper); padding:60px 26px 12px; }
 .brand-illust{ margin:28px -26px 0; }
 .brand-illust img{ width:100%; display:block; }
-.brand-illust-cap{ text-align:right; font-size:.66rem; color:var(--ink-soft); padding:8px 26px 0; }
+.brand-illust-cap{ text-align:right; font-size:.66rem; color:var(--ink); font-weight:500; padding:8px 26px 0; }
 .brand-body{ padding:26px 0 46px; }
 .brand-body p{ font-size:1rem; color:var(--ink); margin:0 0 20px; line-height:1.95; }
 .tagline{
   font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900;
   font-size:2rem; color:var(--ink); margin:10px 0 0; letter-spacing:.04em;
 }
-.brand-fineprint{ font-size:.78rem; color:var(--ink-soft); margin-top:22px; line-height:1.85; }
+.brand-fineprint{ font-size:.78rem; color:var(--ink); font-weight:500; margin-top:22px; line-height:1.85; }
 
 /* スタッフが選んだ理由 */
 .staff-voice{ background:var(--paper-2); padding:56px 26px 48px; }
@@ -317,13 +316,13 @@ a{ text-decoration:none; color:inherit; }
 }
 .note-card .q-mark{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.8rem; color:var(--pink); line-height:.6; display:block; margin-bottom:8px; }
 .note-card blockquote{ margin:0 0 12px; font-size:.94rem; line-height:1.9; color:var(--ink); }
-.note-card figcaption{ font-size:.76rem; font-weight:700; color:var(--ink-soft); letter-spacing:.02em; }
+.note-card figcaption{ font-size:.76rem; font-weight:700; color:var(--ink); letter-spacing:.02em; }
 
 /* 注意書き・フッター */
 .notices{ background:var(--card); padding:34px 26px 88px; }
-.notices-ttl{ font-family:"Zen Kaku Gothic New",sans-serif; font-size:.88rem; font-weight:700; color:var(--ink-soft); margin:0 0 12px; }
+.notices-ttl{ font-family:"Zen Kaku Gothic New",sans-serif; font-size:.88rem; font-weight:700; color:var(--ink); margin:0 0 12px; }
 .notices ul{ margin:0; padding:0 0 0 1.1em; }
-.notices li{ font-size:.76rem; color:var(--ink-soft); line-height:1.9; }
+.notices li{ font-size:.76rem; color:var(--ink); font-weight:500; line-height:1.9; }
 .footer{ background:var(--pink-deep); color:var(--paper); text-align:center; padding:34px 20px 100px; font-size:.82rem; line-height:1.9; }
 .footer .fbrand{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; letter-spacing:.04em; font-size:1.1rem; }
 .footer a{ color:var(--yellow); font-weight:700; }
