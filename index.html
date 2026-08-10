@@ -3,38 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>リニューアルキャンペーン｜8/14スタート 先着100セット限定 調味料セット｜にっぽん津々浦々</title>
-<meta name="description" content="にっぽん津々浦々ショップリニューアル記念。8/14スタート、先着100セット限定。スタッフが厳選した「さ・し・す・せ・そ」基礎調味料セットと、極み調味料三選セットを販売。好きをくまなく。">
+<title>リニューアルキャンペーン｜9/1(火)0:00 スペシャルクーポン配布＆日替わり限定セット｜にっぽん津々浦々</title>
+<meta name="description" content="にっぽん津々浦々は2026年9月1日(火)0:00にリニューアル。ご愛顧に感謝するリニューアルスペシャルクーポン（3,900円以上で390円OFF／8,000円以上で888円OFF）を配布し、9/2・9/3は日替わりでスタッフ厳選の限定調味料セットを先着100名様に販売します。">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Shippori+Mincho:wght@500;600;800&family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --paper:#ECE5D1;
-  --paper-outer:#DBD0AF;
-  --paper-2:#F5F0E1;
-  --card:#FBF8EF;
-  --ink:#242017;
-  --ink-soft:#726A5A;
-  --pink:#EF8299;
-  --pink-deep:#E56A85;
-  --pink-soft:#F9DBE0;
-  --yellow:#FCE24C;
+  --paper:#F4EEDD;
+  --paper-outer:#E3D8B8;
+  --paper-2:#EFE7CD;
+  --card:#FFFDF6;
+  --ink:#221E16;
+  --ink-soft:#726A57;
+  --pink:#E8677E;
+  --pink-deep:#CE4A66;
+  --pink-soft:#F8DEE1;
+  --gold:#BD9138;
+  --gold-soft:#EFE0B4;
   --white:#FFFFFF;
-  --line:#DED4BD;
+  --line:#DDD0AC;
 }
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
   margin:0; background:var(--paper-outer); color:var(--ink);
-  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
   -webkit-font-smoothing:antialiased; line-height:1.85;
 }
 img{ max-width:100%; display:block; }
 a{ text-decoration:none; color:inherit; }
-.maru{ font-family:"Noto Sans JP",sans-serif; }
+.mincho{ font-family:"Shippori Mincho",serif; }
+.jf{ font-family:"Josefin Sans",sans-serif; }
 
 /* 背景 */
 .bg-pattern{ position:fixed; inset:0; z-index:-1; background:var(--paper-outer); }
@@ -42,66 +44,39 @@ a{ text-decoration:none; color:inherit; }
 /* レイアウト */
 .wrap{
   max-width:760px; margin:0 auto; background:var(--paper); position:relative;
-  box-shadow:0 0 40px rgba(36,32,23,.14);
+  box-shadow:0 0 44px rgba(34,30,22,.16);
 }
-.inner{ padding:52px 24px; }
+.inner{ padding:58px 26px; }
 .eyebrow{
-  display:flex; align-items:center; justify-content:center; gap:10px;
-  font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.72rem;
-  letter-spacing:.2em; color:var(--pink-deep); margin-bottom:14px;
+  display:flex; align-items:center; gap:10px;
+  font-family:"Josefin Sans",sans-serif; font-weight:600; font-size:.76rem;
+  letter-spacing:.24em; color:var(--pink-deep); margin:0 0 16px;
 }
-.eyebrow::before,.eyebrow::after{ content:''; height:1px; width:24px; background:var(--pink); opacity:.6; }
+.eyebrow::before{ content:''; height:1px; width:30px; background:var(--pink); opacity:.7; }
+.eyebrow.center{ justify-content:center; }
+.eyebrow.center::before{ display:none; }
+.eyebrow.center::after{ content:''; height:1px; width:30px; background:var(--pink); opacity:.7; }
 .sec-title{
-  text-align:center; font-family:"Noto Sans JP",sans-serif; font-weight:900;
-  font-size:1.5rem; line-height:1.6; color:var(--ink); margin:0 0 16px; letter-spacing:.02em;
+  font-family:"Shippori Mincho",serif; font-weight:800;
+  font-size:1.6rem; line-height:1.6; color:var(--ink); margin:0 0 18px; letter-spacing:.02em;
 }
 .sec-title .pink{ color:var(--pink-deep); }
-.sec-lead{ text-align:center; font-size:.92rem; color:var(--ink-soft); margin:0 auto; max-width:560px; }
+.sec-lead{ font-size:.92rem; color:var(--ink-soft); margin:0; max-width:560px; }
+.center-block{ text-align:center; }
+.center-block .sec-lead{ margin-left:auto; margin-right:auto; }
 
 /* ヘッダー */
 .header{
   position:fixed; top:0; left:0; right:0; z-index:60; max-width:760px; margin:0 auto;
-  background:rgba(236,229,209,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);
+  background:rgba(244,238,221,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
 }
-.header-inner{ display:flex; align-items:baseline; justify-content:center; gap:10px; padding:12px 16px; }
-.header-brand{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1rem; color:var(--ink); letter-spacing:.08em; }
-.header-tag{ font-size:.64rem; color:var(--pink-deep); font-weight:700; letter-spacing:.1em; }
-.header-spacer{ height:46px; }
-
-/* 帯 */
-.band{
-  text-align:center; font-family:"Noto Sans JP",sans-serif; font-weight:700;
-  font-size:.8rem; letter-spacing:.02em; padding:12px 16px; line-height:1.6;
-  background:var(--ink); color:var(--paper);
-}
-.band-pink{ background:var(--pink); color:var(--white); }
-.band-cream{ background:var(--paper-2); color:var(--ink); }
-.campaign-band{
-  display:flex; flex-direction:column; align-items:center; gap:8px;
-  padding:28px 20px 30px; text-align:center;
-}
-.campaign-eyebrow{ font-size:.72rem; font-weight:700; letter-spacing:.18em; opacity:.95; }
-.campaign-heading{ font-size:1.4rem; font-weight:900; letter-spacing:.02em; line-height:1.55; }
-
-/* 日替わりスケジュール */
-.daily-intro{ max-width:600px; margin:0 auto; padding:22px 20px 4px; }
-.daily-row{
-  display:flex; align-items:center; gap:14px; background:var(--card);
-  border:2.5px solid var(--ink); border-radius:16px; padding:16px 18px; margin-bottom:14px;
-  box-shadow:5px 5px 0 rgba(36,32,23,.12);
-}
-.daily-row:last-child{ margin-bottom:0; }
-.daily-num{
-  flex:none; width:42px; height:42px; border-radius:50%; background:var(--yellow); color:var(--ink);
-  border:2px solid var(--ink); font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.1rem;
-  display:flex; align-items:center; justify-content:center;
-}
-.daily-text{ display:flex; flex-direction:column; gap:3px; }
-.daily-date{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.3rem; color:var(--pink-deep); letter-spacing:.01em; line-height:1.3; }
-.daily-set{ font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.8rem; color:var(--ink-soft); }
+.header-inner{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; padding:14px 20px; }
+.header-brand{ font-family:"Shippori Mincho",serif; font-weight:800; font-size:1.02rem; color:var(--ink); letter-spacing:.06em; }
+.header-tag{ font-family:"Josefin Sans",sans-serif; font-size:.62rem; color:var(--pink-deep); font-weight:600; letter-spacing:.14em; }
+.header-spacer{ height:50px; }
 
 /* ファーストビュー */
-.fv{ position:relative; overflow:hidden; }
+.fv{ position:relative; overflow:hidden; background:var(--paper); }
 .fv img{ width:100%; display:block; }
 .fv-confetti{ position:absolute; inset:0; z-index:3; pointer-events:none; overflow:hidden; }
 .confetti-piece{ position:absolute; top:-24px; opacity:0; will-change:transform,opacity; }
@@ -112,87 +87,170 @@ a{ text-decoration:none; color:inherit; }
   88%{ opacity:1; }
   100%{ transform:translate(var(--dx), var(--dy)) rotate(var(--dr)); opacity:0; }
 }
-
-/* 販売開始カウントダウン */
-.launch{ padding:34px 24px 8px; text-align:center; }
-.countdown{
-  max-width:440px; margin:0 auto; background:var(--card); border:1px solid var(--line);
-  border-radius:16px; padding:14px 16px;
+/* FVに重ねる日付マーク（旧「8/14 start」バッジ跡地に配置） */
+.fv-date{
+  position:absolute; left:77.5%; top:49%; width:19%; z-index:4;
+  display:flex; flex-direction:column; align-items:flex-start; pointer-events:none;
 }
-.cd-label{ font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.74rem; color:var(--pink-deep); margin:0 0 6px; letter-spacing:.04em; }
-.cd-timer{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.5rem; color:var(--ink); }
-.cd-timer .u{ font-size:.6rem; font-weight:700; color:var(--ink-soft); margin:0 6px 0 2px; }
+.fv-date .fd-num{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-style:italic; font-size:clamp(1.7rem,7vw,2.7rem); line-height:.9; color:var(--ink); }
+.fv-date .fd-rule{ width:60%; height:2px; background:var(--ink); margin:.4em 0 .38em; }
+.fv-date .fd-sub{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:clamp(.48rem,1.5vw,.62rem); letter-spacing:.05em; color:var(--ink); line-height:1.4; }
+
+/* リニューアル告知ストリップ */
+.notice-strip{
+  background:var(--ink); color:var(--paper); text-align:center;
+  font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.78rem;
+  letter-spacing:.04em; padding:14px 16px; line-height:1.7;
+}
+.notice-strip .num{ font-family:"Josefin Sans",sans-serif; font-weight:600; color:var(--gold-soft); }
+
+/* カウントダウン */
+.launch{ padding:36px 24px 10px; text-align:center; }
+.countdown{
+  max-width:460px; margin:0 auto; background:var(--card); border:1px solid var(--line);
+  border-radius:6px; padding:18px 18px 20px;
+}
+.cd-label{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.78rem; color:var(--pink-deep); margin:0 0 10px; letter-spacing:.04em; }
+.cd-timer{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:1.7rem; color:var(--ink); }
+.cd-timer .u{ font-family:"Zen Kaku Gothic New",sans-serif; font-size:.58rem; font-weight:700; color:var(--ink-soft); margin:0 8px 0 3px; }
+
+/* ステートメント（1メッセージ大きく） */
+.statement{ padding:66px 26px 60px; }
+.statement .sec-title{ font-size:2rem; line-height:1.7; }
+.statement p{ font-size:.92rem; color:var(--ink-soft); margin:22px 0 0; max-width:520px; }
 
 /* ブランドメッセージ */
-.brand-illust{ padding:8px 0 0; }
+.brand-illust{ padding:0; }
 .brand-illust img{ width:100%; display:block; }
-.brand-msg{ padding:14px 24px 46px; }
-.brand-msg p{ font-size:.92rem; color:var(--ink); margin:0 0 16px; }
-.brand-msg .small{ font-size:.78rem; color:var(--ink-soft); line-height:1.9; }
+.brand-msg{ padding:16px 26px 54px; background:var(--paper); }
+.brand-msg p{ font-size:.92rem; color:var(--ink); margin:0 0 18px; }
+.brand-msg .small{ font-size:.78rem; color:var(--ink-soft); line-height:1.95; }
 .tagline{
-  text-align:center; font-family:"Noto Sans JP",sans-serif; font-weight:900;
-  font-size:1.7rem; color:var(--ink); margin:6px 0 22px; letter-spacing:.06em;
+  font-family:"Shippori Mincho",serif; font-weight:800;
+  font-size:1.9rem; color:var(--ink); margin:8px 0 26px; letter-spacing:.08em;
 }
 
+/* キャンペーンの流れ（タイムライン） */
+.schedule{ background:var(--paper-2); padding:60px 26px 56px; }
+.timeline{ max-width:520px; margin:34px auto 0; position:relative; padding-left:6px; }
+.timeline::before{ content:''; position:absolute; left:23px; top:8px; bottom:8px; width:1px; background:var(--line); }
+.t-item{ position:relative; display:flex; gap:20px; padding:0 0 34px; }
+.t-item:last-child{ padding-bottom:0; }
+.t-dot{
+  flex:none; position:relative; z-index:1; width:46px; height:46px; border-radius:50%;
+  background:var(--card); border:1.5px solid var(--ink); display:flex; align-items:center; justify-content:center;
+  font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:.86rem; color:var(--ink);
+}
+.t-body{ padding-top:4px; }
+.t-date{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:1.02rem; color:var(--pink-deep); letter-spacing:.02em; }
+.t-desc{ font-size:.86rem; color:var(--ink); margin-top:4px; line-height:1.75; }
+.t-desc .tag{ display:inline-block; font-size:.68rem; font-weight:700; color:var(--gold); border:1px solid var(--gold); border-radius:999px; padding:1px 10px; margin-left:6px; letter-spacing:.03em; }
+
+/* クーポン */
+.coupons{ background:var(--paper); padding:60px 26px 54px; }
+.coupon-list{ max-width:560px; margin:32px auto 0; display:flex; flex-direction:column; gap:24px; }
+.coupon-card{
+  position:relative; display:flex; background:var(--card); border:1.5px solid var(--ink); border-radius:8px; overflow:hidden;
+}
+.coupon-main{ flex:1; min-width:0; padding:22px 20px; }
+.coupon-label{ font-family:"Josefin Sans",sans-serif; font-weight:600; font-size:.62rem; letter-spacing:.16em; color:var(--pink-deep); }
+.coupon-name{ font-family:"Shippori Mincho",serif; font-weight:800; font-size:1.18rem; color:var(--ink); margin:6px 0 10px; }
+.coupon-cond{ font-size:.82rem; color:var(--ink-soft); line-height:1.7; }
+.coupon-start{ margin-top:14px; font-size:.72rem; color:var(--ink-soft); border-top:1px dashed var(--line); padding-top:10px; }
+.coupon-start .d{ font-family:"Josefin Sans",sans-serif; font-weight:600; color:var(--ink); }
+.coupon-stub{
+  flex:none; width:118px; position:relative; background:var(--pink-soft);
+  border-left:2px dashed var(--ink); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; padding:14px 6px;
+}
+.coupon-stub::before,.coupon-stub::after{
+  content:''; position:absolute; left:-11px; width:22px; height:22px; border-radius:50%; background:var(--paper);
+}
+.coupon-stub::before{ top:-11px; }
+.coupon-stub::after{ bottom:-11px; }
+.coupon-off{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:1.9rem; color:var(--pink-deep); line-height:1; }
+.coupon-off .yen{ font-size:.9rem; }
+.coupon-offtext{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.72rem; color:var(--ink); letter-spacing:.04em; }
+.coupon-note{ max-width:560px; margin:20px auto 0; font-size:.72rem; color:var(--ink-soft); text-align:center; }
+
 /* 限定セット */
-.sets{ background:var(--paper-2); padding:52px 18px; }
+.sets{ background:var(--paper-2); padding:0 0 56px; }
+.sets .phase-band{
+  background:var(--ink); color:var(--paper); text-align:center;
+  padding:30px 20px 32px; display:flex; flex-direction:column; align-items:center; gap:8px;
+}
+.phase-band .eyebrow{ color:var(--gold-soft); }
+.phase-band .eyebrow.center::before,.phase-band .eyebrow.center::after{ background:var(--gold-soft); }
+.phase-heading{ font-family:"Shippori Mincho",serif; font-weight:800; font-size:1.4rem; letter-spacing:.02em; line-height:1.55; }
+
+.daily-intro{ max-width:560px; margin:0 auto; padding:26px 22px 4px; }
+.daily-row{
+  display:flex; align-items:center; gap:16px; background:var(--card);
+  border:1.5px solid var(--ink); border-radius:8px; padding:16px 18px; margin-bottom:14px;
+}
+.daily-row:last-child{ margin-bottom:0; }
+.daily-num{
+  flex:none; width:38px; height:38px; border-radius:50%; background:var(--gold-soft); color:var(--ink);
+  border:1.5px solid var(--ink); font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:1rem;
+  display:flex; align-items:center; justify-content:center;
+}
+.daily-text{ display:flex; flex-direction:column; gap:3px; }
+.daily-date{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:1.12rem; color:var(--pink-deep); letter-spacing:.01em; line-height:1.3; }
+.daily-set{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.8rem; color:var(--ink-soft); }
+
+.sets-body{ padding:44px 18px 0; }
 .set-card{
   max-width:600px; margin:0 auto 34px; background:var(--card);
-  border:2.5px solid var(--ink); border-radius:20px; overflow:hidden;
-  box-shadow:6px 6px 0 rgba(36,32,23,.12);
+  border:1.5px solid var(--ink); border-radius:10px; overflow:hidden;
 }
 .set-card:last-child{ margin-bottom:0; }
 .set-photo-wrap{ padding:16px 16px 0; background:var(--card); }
-.set-photo{ width:100%; display:block; background:var(--white); border-radius:14px; }
+.set-photo{ width:100%; display:block; background:var(--white); border-radius:4px; }
 .set-body{ padding:24px 22px 26px; }
-.set-head{ display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+.set-head{ display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
 .set-no{
-  display:inline-block; font-family:"Noto Sans JP",sans-serif; font-weight:900;
-  font-size:.74rem; color:var(--white); background:var(--pink); border-radius:999px;
-  padding:4px 16px; letter-spacing:.06em;
+  display:inline-block; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700;
+  font-size:.72rem; color:var(--white); background:var(--pink-deep); border-radius:999px;
+  padding:4px 16px; letter-spacing:.04em;
 }
 .set-release{
-  display:inline-flex; align-items:center; font-family:"Noto Sans JP",sans-serif; font-weight:900;
-  font-size:.98rem; color:var(--ink); background:var(--yellow); border:2.5px solid var(--ink);
-  border-radius:999px; padding:7px 20px; transform:rotate(-2deg); letter-spacing:.03em;
-  box-shadow:3px 3px 0 rgba(36,32,23,.12);
+  display:inline-flex; align-items:center; font-family:"Josefin Sans",sans-serif; font-weight:700;
+  font-size:.9rem; color:var(--ink); background:var(--gold-soft); border:1.5px solid var(--ink);
+  border-radius:999px; padding:6px 18px; letter-spacing:.01em;
 }
-.set-catch{ font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.9rem; color:var(--pink-deep); margin:0 0 6px; }
-.set-name{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.2rem; line-height:1.5; color:var(--ink); margin:0 0 12px; }
+.set-catch{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.9rem; color:var(--pink-deep); margin:0 0 6px; }
+.set-name{ font-family:"Shippori Mincho",serif; font-weight:800; font-size:1.24rem; line-height:1.55; color:var(--ink); margin:0 0 14px; }
 /* スペシャルプライス */
 .special-price{
-  position:relative; background:var(--pink); border-radius:14px;
-  padding:14px 16px 16px; margin:0 0 16px; text-align:center; color:var(--white);
-  box-shadow:0 8px 18px rgba(229,106,133,.28);
+  position:relative; background:var(--ink); border-radius:8px;
+  padding:16px 16px 18px; margin:0 0 16px; text-align:center; color:var(--paper);
 }
 .special-price .sp-label{
-  display:inline-block; font-family:"Noto Sans JP",sans-serif; font-weight:900;
-  font-size:.82rem; letter-spacing:.08em; color:var(--pink-deep); background:var(--yellow);
-  border-radius:999px; padding:3px 16px; margin-bottom:6px; transform:rotate(-2deg);
+  display:inline-block; font-family:"Josefin Sans",sans-serif; font-weight:600;
+  font-size:.72rem; letter-spacing:.14em; color:var(--ink); background:var(--gold-soft);
+  border-radius:999px; padding:3px 16px; margin-bottom:8px;
 }
 .special-price .sp-price{ display:flex; align-items:baseline; justify-content:center; gap:2px; line-height:1; }
-.special-price .sp-num{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:3.2rem; letter-spacing:-.02em; }
-.special-price .sp-yen{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.3rem; }
-.special-price .sp-tax{ font-size:.68rem; opacity:.9; margin-left:4px; align-self:flex-end; margin-bottom:4px; }
+.special-price .sp-num{ font-family:"Josefin Sans",sans-serif; font-weight:700; font-size:3rem; letter-spacing:-.01em; }
+.special-price .sp-yen{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:1.2rem; }
+.special-price .sp-tax{ font-size:.68rem; opacity:.8; margin-left:4px; align-self:flex-end; margin-bottom:4px; }
 .special-price .sp-free{
-  display:inline-block; font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.74rem;
-  color:var(--pink-deep); background:var(--white); border-radius:999px; padding:3px 14px; margin-top:8px;
+  display:inline-block; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.74rem;
+  color:var(--ink); background:var(--paper); border-radius:999px; padding:3px 14px; margin-top:10px;
 }
-.set-desc{ font-size:.86rem; color:var(--ink-soft); margin:0 0 18px; }
+.set-desc{ font-size:.86rem; color:var(--ink-soft); margin:0 0 20px; }
 
 .contents-ttl{
-  font-family:"Noto Sans JP",sans-serif; font-weight:700; font-size:.78rem; color:var(--ink);
-  text-align:center; letter-spacing:.1em; margin:0 0 12px; position:relative;
+  font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.78rem; color:var(--ink);
+  letter-spacing:.08em; margin:0 0 12px; position:relative;
 }
-.contents-ttl span{ background:var(--card); padding:0 12px; position:relative; z-index:1; }
-.contents-ttl::before{ content:''; position:absolute; left:0; right:0; top:50%; height:1px; background:var(--line); }
-.contents-note{ text-align:center; font-size:.72rem; color:var(--ink-soft); margin:0 0 14px; }
+.contents-ttl span{ background:var(--card); padding-right:12px; position:relative; z-index:1; }
+.contents-note{ font-size:.72rem; color:var(--ink-soft); margin:0 0 14px; }
 .contents-list{ list-style:none; margin:0 0 20px; padding:0; }
 .contents-list li{ display:flex; align-items:center; gap:12px; padding:11px 0; border-bottom:1px dashed var(--line); }
 .contents-list li:last-child{ border-bottom:none; }
 .sasi-label{
-  flex:none; width:34px; height:34px; border-radius:50%; background:var(--pink-soft); color:var(--pink-deep);
-  font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.05rem;
+  flex:none; width:32px; height:32px; border-radius:50%; background:var(--pink-soft); color:var(--pink-deep);
+  font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.98rem;
   display:flex; align-items:center; justify-content:center;
 }
 .contents-list .c-name{ flex:1; font-size:.82rem; line-height:1.5; color:var(--ink); }
@@ -200,55 +258,51 @@ a{ text-decoration:none; color:inherit; }
 .contents-list .c-arrow{ flex:none; color:var(--pink-deep); font-size:.9rem; }
 
 .set-btn{
-  display:block; text-align:center; font-family:"Noto Sans JP",sans-serif; font-weight:700;
-  font-size:1rem; color:var(--white); background:var(--pink); border-radius:999px; padding:15px 20px;
-  box-shadow:0 8px 18px rgba(229,106,133,.3);
+  display:block; text-align:center; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700;
+  font-size:1rem; color:var(--white); background:var(--pink-deep); border-radius:999px; padding:15px 20px;
 }
-.set-btn.is-ended{ background:#C9BDA8; box-shadow:none; pointer-events:none; }
+.set-btn.is-ended{ background:#C9BDA8; pointer-events:none; }
 
 /* yamyam 注記 */
-.yam-note{ background:var(--paper); padding:40px 26px; text-align:center; }
-.yam-note h3{ font-family:"Noto Sans JP",sans-serif; font-weight:900; font-size:1.15rem; color:var(--ink); margin:0 0 12px; letter-spacing:.04em; }
+.yam-note{ background:var(--paper); padding:52px 26px; text-align:center; }
+.yam-note h3{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:1.05rem; color:var(--ink); margin:0 0 12px; letter-spacing:.04em; }
 .yam-note p{ font-size:.8rem; color:var(--ink-soft); margin:0 auto; max-width:560px; line-height:1.9; }
 
 /* スタッフが選んだ理由 */
-.staff-voice{ background:var(--paper-2); padding:52px 24px 46px; }
-.staff-grid{ max-width:600px; margin:30px auto 0; display:flex; flex-direction:column; gap:30px; }
-.note-card{
-  position:relative; background:var(--card); border:2.5px solid var(--ink); border-radius:18px;
-  padding:28px 20px 18px; box-shadow:6px 6px 0 rgba(36,32,23,.12);
-}
-.note-card:nth-child(1){ transform:rotate(-1deg); }
-.note-card:nth-child(2){ transform:rotate(.8deg); }
-.note-card:nth-child(3){ transform:rotate(-.6deg); }
-.note-card::before{
-  content:''; position:absolute; top:-12px; left:50%; transform:translateX(-50%);
-  width:22px; height:22px; border-radius:50%; background:var(--yellow); border:2px solid var(--ink);
-}
-.note-card blockquote{ margin:0 0 14px; font-size:.88rem; line-height:1.9; color:var(--ink); }
-.note-card figcaption{ font-size:.76rem; font-weight:700; color:var(--pink-deep); text-align:right; }
+.staff-voice{ background:var(--paper-2); padding:58px 26px 50px; }
+.staff-grid{ max-width:600px; margin:32px auto 0; display:flex; flex-direction:column; gap:26px; }
+.note-card{ position:relative; padding:6px 4px 6px 22px; border-left:2px solid var(--pink); }
+.note-card .q-mark{ font-family:"Shippori Mincho",serif; font-size:2.4rem; color:var(--pink); line-height:.5; display:block; margin-bottom:6px; }
+.note-card blockquote{ margin:0 0 12px; font-size:.9rem; line-height:1.9; color:var(--ink); font-family:"Shippori Mincho",serif; }
+.note-card figcaption{ font-size:.74rem; font-weight:700; color:var(--ink-soft); letter-spacing:.02em; }
 
 /* 注意書き・フッター */
-.notices{ background:var(--card); padding:32px 26px 90px; }
-.notices-ttl{ font-family:"Noto Sans JP",sans-serif; font-size:.8rem; font-weight:700; color:var(--ink-soft); text-align:center; margin:0 0 12px; }
+.notices{ background:var(--card); padding:36px 26px 90px; }
+.notices-ttl{ font-family:"Zen Kaku Gothic New",sans-serif; font-size:.8rem; font-weight:700; color:var(--ink-soft); margin:0 0 12px; }
 .notices ul{ margin:0; padding:0 0 0 1.1em; }
 .notices li{ font-size:.68rem; color:var(--ink-soft); line-height:1.9; }
-.footer{ background:var(--ink); color:var(--paper); text-align:center; padding:28px 20px 100px; font-size:.74rem; line-height:1.9; }
-.footer .fbrand{ font-family:"Noto Sans JP",sans-serif; font-weight:900; letter-spacing:.08em; }
-.footer a{ color:var(--pink); font-weight:700; }
+.footer{ background:var(--ink); color:var(--paper); text-align:center; padding:30px 20px 100px; font-size:.74rem; line-height:1.9; }
+.footer .fbrand{ font-family:"Shippori Mincho",serif; font-weight:800; letter-spacing:.08em; font-size:1rem; }
+.footer a{ color:var(--gold-soft); font-weight:700; }
 
 /* 追従CTA */
 .sticky-cta{
   position:fixed; bottom:0; left:50%; transform:translateX(-50%); z-index:50;
   width:100%; max-width:760px; padding:10px 16px;
-  background:rgba(236,229,209,.95); backdrop-filter:blur(6px); box-shadow:0 -4px 18px rgba(120,100,70,.18);
+  background:rgba(244,238,221,.96); backdrop-filter:blur(8px); box-shadow:0 -4px 20px rgba(34,30,22,.16);
 }
 .sticky-cta .set-btn{ margin:0; font-size:.9rem; padding:13px; }
 
+@media screen and (max-width:420px){
+  .coupon-stub{ width:98px; padding:12px 4px; }
+  .coupon-off{ font-size:1.55rem; }
+}
+
 @media screen and (min-width:768px){
-  .inner{ padding:66px 40px; }
-  .sec-title{ font-size:1.8rem; }
-  .tagline{ font-size:2rem; }
+  .inner{ padding:74px 46px; }
+  .sec-title{ font-size:1.9rem; }
+  .statement .sec-title{ font-size:2.4rem; }
+  .tagline{ font-size:2.2rem; }
   .sticky-cta{ display:none; }
 }
 </style>
@@ -261,28 +315,40 @@ a{ text-decoration:none; color:inherit; }
   <header class="header">
     <div class="header-inner">
       <span class="header-brand">にっぽん津々浦々</span>
-      <span class="header-tag">リニューアルキャンペーン</span>
+      <span class="header-tag jf">RENEWAL CAMPAIGN</span>
     </div>
   </header>
   <div class="header-spacer"></div>
-
-  <div class="band band-pink">8/14スタート｜【先着100セット限定】リニューアル記念 調味料セット販売</div>
 
   <!-- ============================================================
        ファーストビュー ▼差し替え: images/hero/fv.jpg
        ============================================================ -->
   <section class="fv">
-    <img src="images/hero/fv.jpg" alt="にっぽん津々浦々 リニューアルキャンペーン 8/14スタート">
+    <img src="images/hero/fv.jpg" alt="にっぽん津々浦々 リニューアルキャンペーン">
+    <div class="fv-date" aria-hidden="true">
+      <span class="fd-num">9.1</span>
+      <span class="fd-rule"></span>
+      <span class="fd-sub">TUE. 0:00<br>RENEWAL</span>
+    </div>
     <div class="fv-confetti" id="fvConfetti" aria-hidden="true"></div>
   </section>
+
+  <div class="notice-strip"><span class="num jf">2026.9.1(火) 0:00</span>、にっぽん津々浦々はリニューアルします。</div>
 
   <!-- 限定バッジ + カウントダウン -->
   <div class="launch">
     <div class="countdown">
-      <p class="cd-label" id="cdLabel">キャンペーン開始まで</p>
-      <div class="cd-timer" id="cdTimer">--<span class="u">日</span>--<span class="u">時間</span></div>
+      <p class="cd-label" id="cdLabel">リニューアル・クーポン配布まで</p>
+      <div class="cd-timer jf" id="cdTimer">--<span class="u">日</span>--<span class="u">時間</span></div>
     </div>
   </div>
+
+  <!-- ステートメント -->
+  <section class="statement">
+    <span class="eyebrow jf">RENEWAL MESSAGE</span>
+    <h1 class="sec-title mincho">「ありがとう」を胸に、<br>「これからも」を込めて。</h1>
+    <p>『にっぽん津々浦々』は2026年9月1日、装いを新たにリニューアルいたします。今よりもっと分かりやすく、今よりもっと「好き」に出会えるお店へ。日頃のご愛顧に感謝を込めたクーポンと、スタッフが選び抜いた限定セットで、リニューアルの日をお祝いいただけたら嬉しいです。</p>
+  </section>
 
   <!-- ============================================================
        ブランドメッセージ「好きをくまなく。」 ▼差し替え: images/brand/kumanaku.jpg
@@ -291,120 +357,197 @@ a{ text-decoration:none; color:inherit; }
     <img src="images/brand/kumanaku.jpg" alt="好きをくまなく。 にっぽん津々浦々の約束">
   </section>
   <section class="brand-msg">
-    <div class="inner" style="padding:8px 0 0;">
-      <p>『にっぽん津々浦々』は、この度ショップリニューアルを実施いたしました。</p>
-      <p>『にっぽん津々浦々』は、食品から生活雑貨まで、つくり手、届け手、使い手、それぞれの心からの「好き」が集まるECサイトを目指して運営してきました。今回のリニューアルは、商品やサービスを大きく変えるものではなく、これまで大切にしてきた「好き」をていねいに選び、まじめに届ける姿勢を、言葉とデザインによって、より分かりやすくお伝えするために実施いたしました。</p>
+    <div class="inner" style="padding:10px 0 0;">
+      <p>これは、私たち〈にっぽん津々浦々〉の約束です。</p>
+      <p>『にっぽん津々浦々』は、食品から生活雑貨まで、つくり手、届け手、使い手、それぞれの心からの「好き」が集まるECサイトを目指して運営してきました。今回のリニューアルは、商品やサービスを大きく変えるものではなく、これまで大切にしてきた「好き」をていねいに選び、まじめに届ける姿勢を、言葉とデザインによって、より分かりやすくお伝えするために実施いたします。</p>
       <p>一人ひとり異なる「好き」が集まり、暮らしの中に小さな喜びが花開いていくようにとの思いを込めました。</p>
       <p class="small">さらに、ブランドのアイデンティティを言語化した「好きをくまなく。」という新しいタグラインを掲げました。各サイトにはそれを体現すべく人気イラストレーター・yamyamさんによる、温かくほっこりとする日常風景のイラストがあしらわれています。イラストは様々なシーンに登場する予定ですので、ぜひご注目ください。</p>
+      <div class="tagline mincho">好きをくまなく。</div>
     </div>
   </section>
 
-  <div class="band band-pink campaign-band">
-    <span class="campaign-eyebrow">リニューアルキャンペーン</span>
-    <span class="campaign-heading">日替わり先着100名様<br>限定セット</span>
-  </div>
-  <div class="daily-intro">
-    <div class="daily-row">
-      <span class="daily-num">①</span>
-      <div class="daily-text">
-        <span class="daily-date">8月16日 9時スタート</span>
-        <span class="daily-set">基礎調味料（さしすせそ）セット</span>
+  <!-- ============================================================
+       キャンペーンの流れ
+       ============================================================ -->
+  <section class="schedule" id="schedule">
+    <div class="inner center-block" style="padding-bottom:0;">
+      <span class="eyebrow center jf">CAMPAIGN SCHEDULE</span>
+      <h2 class="sec-title mincho">リニューアルキャンペーンの<br>流れ</h2>
+    </div>
+    <div class="timeline">
+      <div class="t-item">
+        <span class="t-dot jf">01</span>
+        <div class="t-body">
+          <div class="t-date jf">9.1 TUE 0:00〜</div>
+          <p class="t-desc">リニューアルスペシャルクーポン配布スタート<span class="tag jf">COUPON</span></p>
+        </div>
+      </div>
+      <div class="t-item">
+        <span class="t-dot jf">02</span>
+        <div class="t-body">
+          <div class="t-date jf">9.2 WED 0:00〜</div>
+          <p class="t-desc">日替わり限定セット 第一弾（先着100名様）<span class="tag jf">SET</span></p>
+        </div>
+      </div>
+      <div class="t-item">
+        <span class="t-dot jf">03</span>
+        <div class="t-body">
+          <div class="t-date jf">9.3 THU 0:00〜</div>
+          <p class="t-desc">日替わり限定セット 第二弾（先着100名様）<span class="tag jf">SET</span></p>
+        </div>
       </div>
     </div>
-    <div class="daily-row">
-      <span class="daily-num">②</span>
-      <div class="daily-text">
-        <span class="daily-date">8月17日 9時スタート</span>
-        <span class="daily-set">極み調味料 三選セット</span>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <!-- ============================================================
-       限定セット
+       PHASE01 リニューアルスペシャルクーポン
        ============================================================ -->
-  <section class="sets">
-    <div class="inner" style="padding-top:0;">
-      <span class="eyebrow">STAFF SELECTION</span>
-      <h2 class="sec-title">スタッフの<span class="pink">「心からの好き」</span>を<br>集めた調味料セット</h2>
-      <p class="sec-lead">「好きをくまなく。」の想いをお客様にも還元したく、私たちスタッフが選びました。毎日の食卓がグッと特別になる、温かい時間をお届けします。</p>
+  <section class="coupons" id="coupon">
+    <div class="inner" style="padding-bottom:0;">
+      <span class="eyebrow jf">PHASE 01 — COUPON</span>
+      <h2 class="sec-title mincho">リニューアルスペシャル<br>クーポン</h2>
+      <p class="sec-lead">9月1日(火)0:00〜配布スタート。いつもの「ありがとう」と、これからの「よろしく」を、2枚のクーポンに込めました。</p>
+    </div>
+    <div class="coupon-list">
+      <div class="coupon-card">
+        <div class="coupon-main">
+          <span class="coupon-label jf">THANK YOU COUPON</span>
+          <p class="coupon-name mincho">サンキュークーポン</p>
+          <p class="coupon-cond">いつもご愛顧ありがとうの気持ちを込めて。<br>3,900円(税込)以上のお買い物でご利用いただけます。</p>
+          <p class="coupon-start">配布開始 <span class="d jf">9/1(火) 0:00〜</span></p>
+        </div>
+        <div class="coupon-stub">
+          <span class="coupon-off jf">390<span class="yen">円</span></span>
+          <span class="coupon-offtext">OFF</span>
+        </div>
+      </div>
+      <div class="coupon-card">
+        <div class="coupon-main">
+          <span class="coupon-label jf">CONGRATULATIONS COUPON</span>
+          <p class="coupon-name mincho">パチパチクーポン</p>
+          <p class="coupon-cond">これからもよろしくの気持ちを込めて。<br>8,000円(税込)以上のお買い物でご利用いただけます。</p>
+          <p class="coupon-start">配布開始 <span class="d jf">9/1(火) 0:00〜</span></p>
+        </div>
+        <div class="coupon-stub">
+          <span class="coupon-off jf">888<span class="yen">円</span></span>
+          <span class="coupon-offtext">OFF</span>
+        </div>
+      </div>
+    </div>
+    <p class="coupon-note">※クーポンの配布数・ご利用条件の詳細はショップのクーポンページをご確認ください。予告なく配布を終了する場合があります。</p>
+  </section>
+
+  <!-- ============================================================
+       PHASE02 限定セット
+       ============================================================ -->
+  <section class="sets" id="sets">
+    <div class="phase-band">
+      <span class="eyebrow center jf">PHASE 02 — SPECIAL SET</span>
+      <span class="phase-heading mincho">日替わり先着100名様<br>限定セット</span>
+    </div>
+    <div class="daily-intro">
+      <div class="daily-row">
+        <span class="daily-num jf">1</span>
+        <div class="daily-text">
+          <span class="daily-date jf">9月2日(水) 0時スタート</span>
+          <span class="daily-set">基礎調味料（さしすせそ）セット</span>
+        </div>
+      </div>
+      <div class="daily-row">
+        <span class="daily-num jf">2</span>
+        <div class="daily-text">
+          <span class="daily-date jf">9月3日(木) 0時スタート</span>
+          <span class="daily-set">極み調味料 三選セット</span>
+        </div>
+      </div>
     </div>
 
-    <!-- セット① -->
-    <article class="set-card">
-      <div class="set-photo-wrap"><img src="images/sets/set1.jpg" alt="お試し さ・し・す・せ・そ セット" class="set-photo"></div>
-      <div class="set-body">
-        <div class="set-head">
-          <span class="set-no">先着100名様</span>
-          <span class="set-release">① 8/16 9:00 START</span>
-        </div>
-        <p class="set-catch">はじめましてのあなたに！</p>
-        <h3 class="set-name">もっと料理が好きになる<br>基礎調味料（さしすせそ）セット</h3>
-        <div class="special-price">
-          <span class="sp-label">SPECIAL PRICE ｜ 超お得</span>
-          <div class="sp-price"><span class="sp-num">2,500</span><span class="sp-yen">円</span><span class="sp-tax">(税込)</span></div>
-          <span class="sp-free">送料無料</span>
-        </div>
-        <p class="set-desc">お料理の基本「さ・し・す・せ・そ（砂糖・塩・酢・醤油・味噌）」。毎日使うものだからこそ、美味しく、使いやすく、安心できるものを。全国のつくり手が丹精込めた調味料が、いつもの味をワンランク上の豊かな味わいへ導きます。</p>
-
-        <p class="contents-ttl"><span>セット内容（全5点）</span></p>
-        <p class="contents-note">セット内容のそれぞれを見たい方は下記をクリック</p>
-        <ul class="contents-list">
-          <li><span class="sasi-label">さ</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/satunan-shima500/" target="_blank" rel="noopener">薩南製糖 島砂糖 500g</a></span><span class="c-arrow">→</span></li>
-          <li><span class="sasi-label">し</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/uminosei-arashio240g/" target="_blank" rel="noopener">海の精 あらしお 240g</a></span><span class="c-arrow">→</span></li>
-          <li><span class="sasi-label">す</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/robai-500/" target="_blank" rel="noopener">河原酢造 有機純米酢 老梅 500ml</a></span><span class="c-arrow">→</span></li>
-          <li><span class="sasi-label">せ</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/chiba-s200/" target="_blank" rel="noopener">千葉醤油 超特選 下総生しょうゆ 200ml</a></span><span class="c-arrow">→</span></li>
-          <li><span class="sasi-label">そ</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/yamataka-h300/" target="_blank" rel="noopener">山高味噌 秘蔵みそ 300g</a></span><span class="c-arrow">→</span></li>
-        </ul>
-        <a href="#" class="set-btn" data-sale>このセットを購入する</a>
+    <div class="sets-body">
+      <div class="inner center-block" style="padding:0 20px 0;">
+        <span class="eyebrow center jf">STAFF SELECTION</span>
+        <h2 class="sec-title mincho">スタッフの<span class="pink">「心からの好き」</span>を<br>集めた調味料セット</h2>
+        <p class="sec-lead">「好きをくまなく。」の想いをお客様にも還元したく、私たちスタッフが選びました。毎日の食卓がグッと特別になる、温かい時間をお届けします。</p>
       </div>
-    </article>
 
-    <!-- セット② -->
-    <article class="set-card">
-      <div class="set-photo-wrap"><img src="images/sets/set2.jpg" alt="極み調味料三選セット 料理酒・醤油・みりん" class="set-photo"></div>
-      <div class="set-body">
-        <div class="set-head">
-          <span class="set-no">先着100名様</span>
-          <span class="set-release">② 8/17 9:00 START</span>
-        </div>
-        <p class="set-catch">お料理好きのあなたに！</p>
-        <h3 class="set-name">スタッフ厳選 一度は使ってみたい<br>極み調味料 三選セット</h3>
-        <div class="special-price">
-          <span class="sp-label">SPECIAL PRICE ｜ 超お得</span>
-          <div class="sp-price"><span class="sp-num">3,500</span><span class="sp-yen">円</span><span class="sp-tax">(税込)</span></div>
-          <span class="sp-free">送料無料</span>
-        </div>
-        <p class="set-desc">日々キッチンに立つ皆様へ。当店スタッフが自信を持っておすすめする「醤油・みりん・料理酒」の3点。素材本来の旨味を引き出し、奥深いコクを与える調味料が、和食はもちろん様々なお料理の楽しさを広げます。ギフトにもおすすめです。</p>
+      <!-- セット① -->
+      <article class="set-card" style="margin-top:30px;">
+        <div class="set-photo-wrap"><img src="images/sets/set1.jpg" alt="お試し さ・し・す・せ・そ セット" class="set-photo"></div>
+        <div class="set-body">
+          <div class="set-head">
+            <span class="set-no">先着100名様</span>
+            <span class="set-release jf">① 9/2 0:00 START</span>
+          </div>
+          <p class="set-catch">はじめましてのあなたに！</p>
+          <h3 class="set-name">もっと料理が好きになる<br>基礎調味料（さしすせそ）セット</h3>
+          <div class="special-price">
+            <span class="sp-label jf">SPECIAL PRICE</span>
+            <div class="sp-price"><span class="sp-num jf">2,500</span><span class="sp-yen">円</span><span class="sp-tax">(税込)</span></div>
+            <span class="sp-free">送料無料</span>
+          </div>
+          <p class="set-desc">お料理の基本「さ・し・す・せ・そ（砂糖・塩・酢・醤油・味噌）」。毎日使うものだからこそ、美味しく、使いやすく、安心できるものを。全国のつくり手が丹精込めた調味料が、いつもの味をワンランク上の豊かな味わいへ導きます。</p>
 
-        <p class="contents-ttl"><span>セット内容（全3点）</span></p>
-        <p class="contents-note">セット内容のそれぞれを見たい方は下記をクリック</p>
-        <ul class="contents-list">
-          <li><span class="sasi-label" style="font-size:.66rem;">醤油</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/inoue-koshiki720ml/" target="_blank" rel="noopener">井上醤油店 井上 古式じょうゆ 720ml</a></span><span class="c-arrow">→</span></li>
-          <li><span class="sasi-label" style="font-size:.66rem;">みりん</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/ogasawara-600/" target="_blank" rel="noopener">小笠原味淋醸造 焼酎仕込み 一子相傳 600ml</a></span><span class="c-arrow">→</span></li>
-          <li><span class="sasi-label" style="font-size:.62rem;">料理酒</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/hakusen-hanamikura720/" target="_blank" rel="noopener">白扇酒造 福来純 純米料理酒 720ml</a></span><span class="c-arrow">→</span></li>
-        </ul>
-        <a href="#" class="set-btn" data-sale>このセットを購入する</a>
-      </div>
-    </article>
+          <p class="contents-ttl"><span>セット内容（全5点）</span></p>
+          <p class="contents-note">セット内容のそれぞれを見たい方は下記をクリック</p>
+          <ul class="contents-list">
+            <li><span class="sasi-label">さ</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/satunan-shima500/" target="_blank" rel="noopener">薩南製糖 島砂糖 500g</a></span><span class="c-arrow">→</span></li>
+            <li><span class="sasi-label">し</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/uminosei-arashio240g/" target="_blank" rel="noopener">海の精 あらしお 240g</a></span><span class="c-arrow">→</span></li>
+            <li><span class="sasi-label">す</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/robai-500/" target="_blank" rel="noopener">河原酢造 有機純米酢 老梅 500ml</a></span><span class="c-arrow">→</span></li>
+            <li><span class="sasi-label">せ</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/chiba-s200/" target="_blank" rel="noopener">千葉醤油 超特選 下総生しょうゆ 200ml</a></span><span class="c-arrow">→</span></li>
+            <li><span class="sasi-label">そ</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/yamataka-h300/" target="_blank" rel="noopener">山高味噌 秘蔵みそ 300g</a></span><span class="c-arrow">→</span></li>
+          </ul>
+          <a href="#" class="set-btn" data-sale>このセットを購入する</a>
+        </div>
+      </article>
+
+      <!-- セット② -->
+      <article class="set-card">
+        <div class="set-photo-wrap"><img src="images/sets/set2.jpg" alt="極み調味料三選セット 料理酒・醤油・みりん" class="set-photo"></div>
+        <div class="set-body">
+          <div class="set-head">
+            <span class="set-no">先着100名様</span>
+            <span class="set-release jf">② 9/3 0:00 START</span>
+          </div>
+          <p class="set-catch">お料理好きのあなたに！</p>
+          <h3 class="set-name">スタッフ厳選 一度は使ってみたい<br>極み調味料 三選セット</h3>
+          <div class="special-price">
+            <span class="sp-label jf">SPECIAL PRICE</span>
+            <div class="sp-price"><span class="sp-num jf">3,500</span><span class="sp-yen">円</span><span class="sp-tax">(税込)</span></div>
+            <span class="sp-free">送料無料</span>
+          </div>
+          <p class="set-desc">日々キッチンに立つ皆様へ。当店スタッフが自信を持っておすすめする「醤油・みりん・料理酒」の3点。素材本来の旨味を引き出し、奥深いコクを与える調味料が、和食はもちろん様々なお料理の楽しさを広げます。ギフトにもおすすめです。</p>
+
+          <p class="contents-ttl"><span>セット内容（全3点）</span></p>
+          <p class="contents-note">セット内容のそれぞれを見たい方は下記をクリック</p>
+          <ul class="contents-list">
+            <li><span class="sasi-label" style="font-size:.62rem;">醤油</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/inoue-koshiki720ml/" target="_blank" rel="noopener">井上醤油店 井上 古式じょうゆ 720ml</a></span><span class="c-arrow">→</span></li>
+            <li><span class="sasi-label" style="font-size:.62rem;">みりん</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/ogasawara-600/" target="_blank" rel="noopener">小笠原味淋醸造 焼酎仕込み 一子相傳 600ml</a></span><span class="c-arrow">→</span></li>
+            <li><span class="sasi-label" style="font-size:.58rem;">料理酒</span><span class="c-name"><a href="https://item.rakuten.co.jp/tsutsu-uraura/hakusen-hanamikura720/" target="_blank" rel="noopener">白扇酒造 福来純 純米料理酒 720ml</a></span><span class="c-arrow">→</span></li>
+          </ul>
+          <a href="#" class="set-btn" data-sale>このセットを購入する</a>
+        </div>
+      </article>
+    </div>
   </section>
 
   <!-- スタッフが選んだ理由 -->
   <section class="staff-voice">
-    <div class="inner" style="padding:0;">
-      <span class="eyebrow">STAFF'S VOICE</span>
-      <h2 class="sec-title">スタッフが選んだ理由</h2>
+    <div class="inner center-block" style="padding-bottom:0;">
+      <span class="eyebrow center jf">STAFF'S VOICE</span>
+      <h2 class="sec-title mincho">スタッフが選んだ理由</h2>
     </div>
     <div class="staff-grid">
       <figure class="note-card">
+        <span class="q-mark" aria-hidden="true">“</span>
         <blockquote>はじめて味見をしたとき、いつもの卵かけご飯がまったく違う一皿になって驚きました。まずは「さしすせそ」から試してみてほしいです。</blockquote>
         <figcaption>商品部　佐藤</figcaption>
       </figure>
       <figure class="note-card">
+        <span class="q-mark" aria-hidden="true">“</span>
         <blockquote>みりんを変えるだけで、煮物の照りとコクが見違えるほど変わります。毎日の食卓がちょっと誇らしくなるセットです。</blockquote>
         <figcaption>店舗スタッフ　田中</figcaption>
       </figure>
       <figure class="note-card">
+        <span class="q-mark" aria-hidden="true">“</span>
         <blockquote>料理好きの友人に贈ったら、「久しぶりに調味料に感動した」と連絡がきました。贈り物にもおすすめです。</blockquote>
         <figcaption>バイヤー　中村</figcaption>
       </figure>
@@ -413,7 +556,6 @@ a{ text-decoration:none; color:inherit; }
 
   <!-- yamyam 注記 -->
   <section class="yam-note">
-    <div class="tagline">好きをくまなく。</div>
     <h3>イラスト：yamyam さん</h3>
     <p>各サイトには「好きをくまなく。」を体現する、人気イラストレーター・yamyamさんによる温かくほっこりとする日常風景のイラストをあしらいました。様々なシーンに登場予定です。ぜひご注目ください。</p>
   </section>
@@ -422,9 +564,10 @@ a{ text-decoration:none; color:inherit; }
   <section class="notices">
     <p class="notices-ttl">ご注意事項</p>
     <ul>
-      <li>限定セットは8/14スタート、先着100セット限定です。予定数に達し次第、販売を終了いたします。</li>
+      <li>リニューアルスペシャルクーポンは9月1日(火)0:00より配布を開始いたします。配布数・ご利用条件の詳細はクーポンページをご確認ください。</li>
+      <li>限定セットは日替わりで先着100名様までのご提供です（第一弾：9/2(水)0:00〜、第二弾：9/3(木)0:00〜）。予定数に達し次第、販売を終了いたします。</li>
       <li>価格はすべて税込・送料無料です。</li>
-      <li>セット内容・仕様は予告なく変更になる場合があります。</li>
+      <li>クーポン・セットの内容や条件は予告なく変更・終了になる場合があります。</li>
       <li>写真はイメージです。お使いのモニターにより色味が異なる場合があります。</li>
     </ul>
   </section>
@@ -437,7 +580,7 @@ a{ text-decoration:none; color:inherit; }
 
   <!-- 追従CTA -->
   <div class="sticky-cta">
-    <a href="#" class="set-btn" data-sale>先着100セット限定｜セットを見る</a>
+    <a href="#schedule" class="set-btn">9/1 START｜クーポン＆限定セットを見る</a>
   </div>
 
 </div>
@@ -448,28 +591,30 @@ a{ text-decoration:none; color:inherit; }
    下の SALE_URL に入れると全ボタンに一括反映されます。 */
 const SALE_URL = "#";
 
-/* キャンペーン期間: 8/14スタート(先着100セット・終了日は数量次第) */
-const CAMPAIGN_START = new Date("2026-08-14T00:00:00+09:00");
+/* キャンペーン日程
+   9/1(火)0:00 リニューアル・クーポン配布開始／9/2(水)0:00 限定セット第一弾／9/3(木)0:00 限定セット第二弾
+   （セットの発売日時はHTML側に静止テキストで表示。カウントダウンはリニューアル日のみ対象） */
+const RENEWAL_START = new Date("2026-09-01T00:00:00+09:00");
 
 document.querySelectorAll('[data-sale]').forEach(b=>{ if(SALE_URL !== "#") b.setAttribute('href', SALE_URL); });
 
-/* ===================== カウントダウン(開始まで) ===================== */
+/* ===================== カウントダウン(リニューアルまで) ===================== */
 function pad(n){ return String(n).padStart(2,'0'); }
 function updateCountdown(){
   const label = document.getElementById('cdLabel');
   const timer = document.getElementById('cdTimer');
   const now = new Date();
-  if(now < CAMPAIGN_START){
-    const d = CAMPAIGN_START - now;
+  if(now < RENEWAL_START){
+    const d = RENEWAL_START - now;
     const days = Math.floor(d/86400000);
     const hours = Math.floor((d%86400000)/3600000);
     const mins = Math.floor((d%3600000)/60000);
     const secs = Math.floor((d%60000)/1000);
-    label.textContent = 'キャンペーン開始まで';
+    label.textContent = 'リニューアル・クーポン配布まで';
     timer.innerHTML = `${days}<span class="u">日</span>${pad(hours)}<span class="u">時間</span>${pad(mins)}<span class="u">分</span>${pad(secs)}<span class="u">秒</span>`;
   }else{
-    label.textContent = '先着100セット限定・好評販売中！';
-    timer.innerHTML = `<span style="font-size:1.1rem;">数量限定・なくなり次第終了</span>`;
+    label.textContent = 'クーポン配布中／日替わり限定セットも公開中';
+    timer.innerHTML = `<span style="font-size:1.05rem;">好評開催中！</span>`;
   }
 }
 updateCountdown();
@@ -479,9 +624,9 @@ setInterval(updateCountdown, 1000);
 (function(){
   const layer = document.getElementById('fvConfetti');
   if(!layer) return;
-  const colors = ['#EF8299','#FCE24C','#E56A85','#FFFFFF','#F9DBE0','#242017'];
-  const shapes = ['circle','rect','heart','heart'];
-  const COUNT = 34;
+  const colors = ['#E8677E','#CE4A66','#BD9138','#FFFFFF','#F8DEE1'];
+  const shapes = ['circle','rect','heart'];
+  const COUNT = 30;
 
   function build(){
     const w = layer.offsetWidth, h = layer.offsetHeight || 400;
@@ -491,11 +636,11 @@ setInterval(updateCountdown, 1000);
       p.className = 'confetti-piece';
       const shape = shapes[Math.floor(Math.random()*shapes.length)];
       const color = colors[Math.floor(Math.random()*colors.length)];
-      const size = 8 + Math.random()*9;
+      const size = 7 + Math.random()*8;
       p.style.left = (Math.random()*100) + '%';
       if(shape==='circle'){ p.style.width=size+'px'; p.style.height=size+'px'; p.style.background=color; p.style.borderRadius='50%'; }
-      else if(shape==='rect'){ p.style.width=size+'px'; p.style.height=(size*0.5)+'px'; p.style.background=color; p.style.borderRadius='2px'; }
-      else { p.textContent='♥'; p.style.color=color; p.style.fontSize=(size+4)+'px'; p.style.lineHeight='1'; }
+      else if(shape==='rect'){ p.style.width=size+'px'; p.style.height=(size*0.5)+'px'; p.style.background=color; p.style.borderRadius='1px'; }
+      else { p.textContent='♥'; p.style.color=color; p.style.fontSize=(size+3)+'px'; p.style.lineHeight='1'; }
       p.style.setProperty('--dx', (Math.random()*80-40).toFixed(0)+'px');
       p.style.setProperty('--dy', (h + 40).toFixed(0)+'px');
       p.style.setProperty('--dr', (Math.random()*720-360).toFixed(0)+'deg');
@@ -508,7 +653,7 @@ setInterval(updateCountdown, 1000);
 
   window.addEventListener('load', ()=>{
     play();
-    setInterval(play, 5500);
+    setInterval(play, 6000);
   });
 })();
 </script>
