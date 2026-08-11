@@ -161,60 +161,17 @@ a{ text-decoration:none; color:inherit; }
 /* クーポン */
 .coupons{ background:var(--yellow); padding:60px 26px 54px; }
 .coupons .eyebrow-deco{ color:var(--pink-deep); }
-.coupon-list{ max-width:560px; margin:32px auto 0; display:flex; flex-direction:column; gap:30px; }
-.coupon-wrap{ position:relative; padding-top:14px; }
-.coupon-wrap:nth-child(1){ transform:rotate(-1.2deg); }
-.coupon-wrap:nth-child(2){ transform:rotate(1.1deg); }
-.coupon-card{
-  position:relative; display:flex; flex-direction:column; background:var(--card); border:4px solid var(--pink-deep); border-radius:10px; overflow:hidden;
+.coupon-list{ max-width:560px; margin:32px auto 0; display:flex; flex-direction:column; gap:26px; }
+.coupon-wrap{ display:block; }
+.coupon-banner{
+  border-radius:14px; overflow:hidden; border:4px solid var(--ink);
   box-shadow:7px 7px 0 rgba(34,30,22,.16);
 }
-.coupon-get{
-  position:absolute; top:0; left:18px; z-index:2; font-family:"Rubik",sans-serif; font-weight:700;
-  font-size:.74rem; letter-spacing:.08em; color:var(--ink); background:var(--yellow); border:1.5px solid var(--pink-deep);
-  border-radius:999px; padding:5px 16px;
-}
-.coupon-main{ padding:32px 22px 24px; }
-.coupon-head{ display:flex; align-items:center; gap:10px; margin-bottom:12px; }
-.coupon-num{
-  flex:none; width:40px; height:40px; border-radius:50%; background:var(--yellow); color:var(--ink);
-  font-family:"Rubik",sans-serif; font-weight:700; font-size:1.02rem;
-  display:flex; align-items:center; justify-content:center;
-}
-.coupon-num.is-kanji{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; }
-.coupon-name{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.7rem; color:var(--pink-deep); margin:0; line-height:1.2; }
-.coupon-subname{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.8rem; color:var(--ink); margin:2px 0 0; letter-spacing:.02em; }
-.coupon-cond{ font-size:.94rem; color:var(--ink); font-weight:500; line-height:1.8; margin:0; }
-.coupon-start{ margin-top:16px; font-size:.8rem; color:var(--ink); font-weight:500; border-top:1px dashed var(--line); padding-top:12px; }
-.coupon-start .d{ font-family:"Rubik",sans-serif; font-weight:600; color:var(--ink); white-space:nowrap; }
-.coupon-stub{
-  position:relative; background:var(--pink-deep);
-  border-top:2px dashed var(--pink-deep); display:flex; flex-direction:row; align-items:baseline; justify-content:center; gap:10px; padding:18px 14px;
-}
-.coupon-stub::before,.coupon-stub::after{
-  content:''; position:absolute; top:-11px; width:22px; height:22px; border-radius:50%; background:var(--card);
-}
-.coupon-stub::before{ left:-11px; }
-.coupon-stub::after{ right:-11px; }
-.coupon-off{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:2.1rem; color:var(--white); line-height:1.2; letter-spacing:.01em; }
-.coupon-off .yen{ font-size:.88em; }
-.coupon-off .off-en{ margin-left:.12em; }
+.coupon-banner img{ width:100%; display:block; }
 .coupon-note{ max-width:560px; margin:26px auto 0; font-size:.82rem; color:var(--ink); font-weight:500; text-align:center; }
 .coupon-cta{
-  display:block; margin-top:18px; text-align:center; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700;
+  display:block; margin-top:16px; text-align:center; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700;
   font-size:.96rem; color:var(--white); background:var(--ink); border-radius:999px; padding:15px 16px;
-}
-
-@media screen and (min-width:640px){
-  .coupon-card{ flex-direction:row; }
-  .coupon-main{ flex:1; min-width:0; }
-  .coupon-stub{
-    flex:none; width:230px; flex-direction:column; justify-content:center;
-    border-top:none; border-left:2px dashed var(--pink-deep);
-  }
-  .coupon-stub::before{ left:-11px; top:-11px; }
-  .coupon-stub::after{ right:auto; left:-11px; top:auto; bottom:-11px; }
-  .coupon-off{ font-size:2.3rem; white-space:nowrap; }
 }
 
 /* 限定セット */
@@ -343,7 +300,6 @@ a{ text-decoration:none; color:inherit; }
   .tagline{ font-size:2.6rem; }
   .t-date-big{ font-size:4rem; letter-spacing:.04em; }
   .intro-total{ font-size:1.9rem; max-width:560px; padding:22px 40px; }
-  .coupon-name{ font-size:2.1rem; }
   .set-name{ font-size:2rem; }
   .special-price .sp-num{ font-size:4rem; }
 
@@ -357,11 +313,7 @@ a{ text-decoration:none; color:inherit; }
   .t-desc{ font-size:1.3rem; }
   .t-desc .tag{ font-size:.86rem; }
   .schedule-note{ font-size:1.02rem; }
-  .coupon-cond{ font-size:1.14rem; }
-  .coupon-subname{ font-size:.96rem; }
-  .coupon-start{ font-size:.98rem; }
   .coupon-note{ font-size:1rem; }
-  .coupon-get{ font-size:.9rem; }
   .phase-heading .small{ font-size:1.05rem; }
   .set-catch{ font-size:1.22rem; }
   .set-desc{ font-size:1.16rem; }
@@ -490,44 +442,16 @@ a{ text-decoration:none; color:inherit; }
     </div>
     <div class="coupon-list">
       <div class="coupon-wrap">
-        <span class="coupon-get jf">LIMITED COUPON</span>
-        <div class="coupon-card">
-          <div class="coupon-main">
-            <div class="coupon-head">
-              <span class="coupon-num jf">39</span>
-              <div>
-                <p class="coupon-name"><span class="jf">390</span><span class="nowrap">円クーポン</span></p>
-                <p class="coupon-subname">サンキュー(39)クーポン</p>
-              </div>
-            </div>
-            <p class="coupon-cond">いつもご愛顧いただいている感謝を込めて。<br>税込3,900円以上のお買い物でご利用いただけます。</p>
-            <p class="coupon-start">配布・利用期間 <span class="d jf">9/1</span>(火)<span class="d jf">10:00</span>〜<span class="d jf">9/4</span>(金)<span class="d jf">9:59</span></p>
-            <a href="#" class="coupon-cta" data-coupon>クーポンを獲得する</a>
-          </div>
-          <div class="coupon-stub">
-            <span class="coupon-off jf">390<span class="yen">円</span><span class="off-en">OFF</span></span>
-          </div>
+        <div class="coupon-banner">
+          <img src="images/coupons/390off.jpg" alt="サンキュー(39)クーポン 390円OFF 3,900円以上でご利用可 9/1(火)10:00〜9/4(金)9:59">
         </div>
+        <a href="#" class="coupon-cta" data-coupon>クーポンを獲得する</a>
       </div>
       <div class="coupon-wrap">
-        <span class="coupon-get jf">LIMITED COUPON</span>
-        <div class="coupon-card">
-          <div class="coupon-main">
-            <div class="coupon-head">
-              <span class="coupon-num is-kanji">八</span>
-              <div>
-                <p class="coupon-name"><span class="jf">888</span><span class="nowrap">円クーポン</span></p>
-                <p class="coupon-subname">末広がりの「八」クーポン</p>
-              </div>
-            </div>
-            <p class="coupon-cond">これからも選ばれるブランドへの願いを込めて。<br>税込8,000円以上のお買い物でご利用いただけます。</p>
-            <p class="coupon-start">配布・利用期間 <span class="d jf">9/1</span>(火)<span class="d jf">10:00</span>〜<span class="d jf">9/4</span>(金)<span class="d jf">9:59</span></p>
-            <a href="#" class="coupon-cta" data-coupon>クーポンを獲得する</a>
-          </div>
-          <div class="coupon-stub">
-            <span class="coupon-off jf">888<span class="yen">円</span><span class="off-en">OFF</span></span>
-          </div>
+        <div class="coupon-banner">
+          <img src="images/coupons/888off.jpg" alt="末広がりの「八」クーポン 888円OFF 8,000円以上でご利用可 9/1(火)10:00〜9/4(金)9:59">
         </div>
+        <a href="#" class="coupon-cta" data-coupon>クーポンを獲得する</a>
       </div>
     </div>
     <p class="coupon-note">※<span class="nowrap">クーポン</span>のご利用条件の詳細は<span class="nowrap">ショップ</span>の<span class="nowrap">クーポンページ</span>をご確認ください。</p>
