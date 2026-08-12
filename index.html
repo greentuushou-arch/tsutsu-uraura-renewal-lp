@@ -147,7 +147,20 @@ a{ text-decoration:none; color:inherit; }
   background:var(--ink); color:var(--white); text-align:center; border-radius:10px;
   padding:17px 20px; font-weight:700; font-size:1rem; letter-spacing:.06em;
 }
+.intro-bubble{
+  position:relative; display:block; width:100%; max-width:420px; box-sizing:border-box;
+  margin:26px auto 34px; background:var(--pink-deep); border-radius:14px; padding:15px 22px;
+  text-align:center; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900;
+  font-size:1.05rem; letter-spacing:.02em; color:var(--paper);
+}
+.intro-bubble .big{ font-size:1.15em; color:var(--yellow); }
+.intro-bubble::after{
+  content:''; position:absolute; left:50%; bottom:-13px; transform:translateX(-50%);
+  width:0; height:0; border-left:13px solid transparent; border-right:13px solid transparent;
+  border-top:15px solid var(--pink-deep);
+}
 .intro-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:22px; }
+.intro-bubble + .intro-grid{ margin-top:0; }
 .intro-card{ display:block; }
 .intro-photo{ position:relative; }
 .intro-card img{ width:100%; border-radius:10px; border:4px solid var(--ink); }
@@ -161,14 +174,6 @@ a{ text-decoration:none; color:inherit; }
 }
 .intro-cap{ margin-top:10px; text-align:center; font-size:.84rem; font-weight:700; color:var(--ink); line-height:1.5; }
 .intro-cap .n{ display:inline-block; width:22px; height:22px; border-radius:50%; background:var(--yellow); border:1px solid var(--pink-deep); font-family:"Rubik",sans-serif; font-weight:700; font-size:.72rem; line-height:20px; margin-right:5px; }
-.intro-total-wrap{ display:flex; justify-content:center; margin-top:32px; padding:0 4px; }
-.intro-total{
-  display:inline-block; width:100%; max-width:420px; box-sizing:border-box; text-align:center;
-  background:var(--pink-deep); border-radius:999px; padding:16px 20px;
-  font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.22rem; letter-spacing:.03em; color:var(--paper); white-space:nowrap;
-}
-.intro-total .big{ font-size:1em; color:var(--yellow); }
-
 /* キャンペーンの流れ（タイムライン） */
 .schedule{ background:var(--pink-soft); padding:60px 26px 54px; }
 .schedule .sec-title{ color:var(--ink); }
@@ -303,7 +308,7 @@ a{ text-decoration:none; color:inherit; }
 
 @media screen and (max-width:420px){
   .intro-grid{ gap:10px; }
-  .intro-total{ font-size:1.05rem; }
+  .intro-bubble{ font-size:.98rem; }
 }
 
 @media screen and (min-width:768px){
@@ -314,7 +319,7 @@ a{ text-decoration:none; color:inherit; }
   .phase-heading{ font-size:2.4rem; }
   .tagline{ font-size:2.6rem; }
   .t-date-big{ font-size:4rem; letter-spacing:.04em; }
-  .intro-total{ font-size:1.9rem; max-width:560px; padding:22px 40px; }
+  .intro-bubble{ font-size:1.5rem; max-width:560px; padding:22px 32px; }
   .intro-badge{ width:74px; height:74px; font-size:1rem; top:-20px; left:16px; }
   .intro-coupon-promo{ font-size:1.3rem; padding:22px 20px; }
   .set-name{ font-size:2rem; }
@@ -415,6 +420,7 @@ a{ text-decoration:none; color:inherit; }
       <span class="intro-badge">第一弾</span>
       リニューアル記念クーポン配布
     </a>
+    <div class="intro-bubble">各種<span class="big">50</span>個！記念セット限定販売</div>
     <div class="intro-grid">
       <a class="intro-card" href="#set1">
         <div class="intro-photo">
@@ -430,9 +436,6 @@ a{ text-decoration:none; color:inherit; }
         </div>
         <p class="intro-cap"><span class="n jf">2</span>極み調味料三選</p>
       </a>
-    </div>
-    <div class="intro-total-wrap">
-      <div class="intro-total">各種限定<span class="big">50</span>個販売！</div>
     </div>
   </section>
 
