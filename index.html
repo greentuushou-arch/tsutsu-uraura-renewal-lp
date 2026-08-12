@@ -75,6 +75,7 @@ a{ text-decoration:none; color:inherit; }
 }
 .sec-title .pink{ color:var(--pink-deep); }
 .sec-title .intro-date{ display:block; font-size:.52em; letter-spacing:.04em; margin-bottom:10px; white-space:nowrap; }
+.sec-title .sec-title-note{ display:block; font-size:.4em; font-weight:700; color:var(--ink-soft); margin-top:10px; letter-spacing:.03em; }
 .sec-lead{ font-size:1.08rem; color:var(--ink); font-weight:500; margin:0; line-height:1.8; }
 .center-block{ text-align:center; }
 .center-block .sec-lead{ max-width:560px; margin-left:auto; margin-right:auto; }
@@ -141,7 +142,12 @@ a{ text-decoration:none; color:inherit; }
 
 /* 小見出し①：キャンペーン概要 + セット写真プレビュー */
 .intro{ padding:60px 26px 50px; }
-.intro-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:28px; }
+.intro-coupon-promo{
+  position:relative; display:block; margin-top:28px;
+  background:var(--ink); color:var(--white); text-align:center; border-radius:999px;
+  padding:17px 20px; font-weight:700; font-size:1.1rem; letter-spacing:.24em;
+}
+.intro-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:22px; }
 .intro-card{ display:block; }
 .intro-photo{ position:relative; }
 .intro-card img{ width:100%; border-radius:10px; border:4px solid var(--ink); }
@@ -310,6 +316,7 @@ a{ text-decoration:none; color:inherit; }
   .t-date-big{ font-size:4rem; letter-spacing:.04em; }
   .intro-total{ font-size:1.9rem; max-width:560px; padding:22px 40px; }
   .intro-badge{ width:74px; height:74px; font-size:1rem; top:-20px; left:16px; }
+  .intro-coupon-promo{ font-size:1.4rem; padding:22px 20px; }
   .set-name{ font-size:2rem; }
   .special-price .sp-num{ font-size:4rem; }
   .special-price .sp-yen{ font-size:1.9rem; }
@@ -404,18 +411,22 @@ a{ text-decoration:none; color:inherit; }
     <span class="eyebrow jf">SEP 1 TUE — SEP 4 FRI</span>
     <h1 class="sec-title"><span class="intro-date">9/1（火）〜4（金）限定</span>新しい「好き」に<br>出会う<span class="pink nowrap">キャンペーン</span></h1>
     <p class="sec-lead">ブランド<span class="nowrap">リニューアル</span>を記念して、<span class="nowrap">スタッフ</span>が厳選した調味料<span class="nowrap">セット</span>2種を計100個限定で。日頃のご愛顧に感謝を込めた記念<span class="nowrap">クーポン</span>も配布します。</p>
+    <a class="intro-coupon-promo" href="#coupon">
+      <span class="intro-badge">第一弾</span>
+      <span class="jf">COUPON</span>
+    </a>
     <div class="intro-grid">
       <a class="intro-card" href="#set1">
         <div class="intro-photo">
           <img src="images/sets/set1.jpg" alt="「さ・し・す・せ・そ」セット">
-          <span class="intro-badge">第一弾</span>
+          <span class="intro-badge">第二弾</span>
         </div>
         <p class="intro-cap"><span class="n jf">1</span>「さ・し・す・せ・そ」セット</p>
       </a>
       <a class="intro-card" href="#set2">
         <div class="intro-photo">
           <img src="images/sets/set2.jpg" alt="極み調味料三選">
-          <span class="intro-badge">第二弾</span>
+          <span class="intro-badge">第三弾</span>
         </div>
         <p class="intro-cap"><span class="n jf">2</span>極み調味料三選</p>
       </a>
@@ -465,7 +476,7 @@ a{ text-decoration:none; color:inherit; }
   <section class="coupons" id="coupon">
     <div class="inner" style="padding-bottom:0;">
       <span class="eyebrow-deco jf">SPECIAL COUPON</span>
-      <h2 class="sec-title">感謝を込めた<br>記念クーポン<span class="nowrap">2種</span></h2>
+      <h2 class="sec-title">感謝を込めた<br>記念クーポン<span class="nowrap">2種</span><span class="sec-title-note">（店内全品対象）</span></h2>
       <p class="sec-lead">配布・利用期間は9月1日(火)10:00〜9月4日(金)9:59。期間中はいつでも獲得・ご利用いただけます。</p>
     </div>
     <div class="coupon-list">
