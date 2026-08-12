@@ -148,9 +148,19 @@ a{ text-decoration:none; color:inherit; }
   position:absolute; top:8px; left:8px; z-index:2;
   display:flex; align-items:center; justify-content:center;
   width:56px; height:56px; border-radius:50%;
-  background:var(--pink-soft); color:var(--ink); border:3px solid var(--white);
+  background:var(--pink-soft); color:var(--white);
   font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:.8rem; letter-spacing:.02em;
-  box-shadow:0 2px 6px rgba(34,30,22,.28);
+  box-shadow:0 0 0 3px var(--pink-deep), 0 5px 10px rgba(34,30,22,.28);
+  transform:rotate(var(--rot,-7deg));
+  animation:badge-bounce 1.8s ease-in-out infinite;
+}
+.intro-grid a:nth-child(2) .intro-badge{ --rot:7deg; animation-delay:.3s; }
+@keyframes badge-bounce{
+  0%,100%{ transform:translateY(0) rotate(var(--rot,-7deg)); }
+  50%{ transform:translateY(-6px) rotate(var(--rot,-7deg)); }
+}
+@media (prefers-reduced-motion: reduce){
+  .intro-badge{ animation:none; }
 }
 .intro-cap{ margin-top:10px; text-align:center; font-size:.84rem; font-weight:700; color:var(--ink); line-height:1.5; }
 .intro-cap .n{ display:inline-block; width:22px; height:22px; border-radius:50%; background:var(--yellow); border:1px solid var(--pink-deep); font-family:"Rubik",sans-serif; font-weight:700; font-size:.72rem; line-height:20px; margin-right:5px; }
