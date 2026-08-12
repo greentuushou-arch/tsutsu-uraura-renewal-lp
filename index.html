@@ -74,6 +74,7 @@ a{ text-decoration:none; color:inherit; }
   font-size:2.1rem; line-height:1.45; color:var(--ink); margin:0 0 20px; letter-spacing:0;
 }
 .sec-title .pink{ color:var(--pink-deep); }
+.sec-title .intro-date{ display:block; font-size:.52em; letter-spacing:.04em; margin-bottom:10px; white-space:nowrap; }
 .sec-lead{ font-size:1.08rem; color:var(--ink); font-weight:500; margin:0; line-height:1.8; }
 .center-block{ text-align:center; }
 .center-block .sec-lead{ max-width:560px; margin-left:auto; margin-right:auto; }
@@ -197,7 +198,7 @@ a{ text-decoration:none; color:inherit; }
 /* 限定セット */
 .sets{ background:var(--paper-2); padding:0 0 54px; }
 .sets .phase-band{
-  background:var(--pink-soft); color:var(--ink); text-align:center;
+  background:var(--pink-soft); color:var(--white); text-align:center;
   padding:30px 20px 32px; display:flex; flex-direction:column; align-items:center; gap:8px;
 }
 .phase-band .eyebrow{ color:var(--pink-deep); }
@@ -257,9 +258,9 @@ a{ text-decoration:none; color:inherit; }
   border-radius:999px; padding:4px 16px; margin-bottom:10px;
 }
 .special-price .sp-price{ display:flex; align-items:baseline; justify-content:center; gap:2px; line-height:1; }
-.special-price .sp-num{ font-family:"Rubik",sans-serif; font-weight:700; font-size:3.4rem; letter-spacing:-.01em; color:var(--ink); }
-.special-price .sp-yen{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:1.3rem; }
-.special-price .sp-tax{ font-size:.74rem; opacity:.8; margin-left:6px; align-self:flex-end; margin-bottom:6px; }
+.special-price .sp-num{ font-family:"Rubik",sans-serif; font-weight:700; font-size:3.4rem; letter-spacing:-.01em; color:var(--white); }
+.special-price .sp-yen{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:1.6rem; color:var(--white); }
+.special-price .sp-tax{ font-size:.74rem; opacity:.85; margin-left:6px; align-self:flex-end; margin-bottom:6px; color:var(--white); }
 .special-price .sp-free{
   display:inline-block; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.78rem;
   color:var(--ink); background:var(--paper); border-radius:999px; padding:4px 14px; margin-top:10px;
@@ -311,6 +312,7 @@ a{ text-decoration:none; color:inherit; }
   .intro-badge{ width:74px; height:74px; font-size:1rem; top:-20px; left:16px; }
   .set-name{ font-size:2rem; }
   .special-price .sp-num{ font-size:4rem; }
+  .special-price .sp-yen{ font-size:1.9rem; }
 
   /* 小さな説明文字はPCではしっかり読みやすい大きさに */
   .header-tag{ font-size:.82rem; }
@@ -400,7 +402,7 @@ a{ text-decoration:none; color:inherit; }
        ============================================================ -->
   <section class="intro" id="intro">
     <span class="eyebrow jf">SEP 1 TUE — SEP 4 FRI</span>
-    <h1 class="sec-title">9/1（火）〜4（金）限定<br>新しい「好き」に<br>出会う<span class="pink nowrap">キャンペーン</span></h1>
+    <h1 class="sec-title"><span class="intro-date">9/1（火）〜4（金）限定</span>新しい「好き」に<br>出会う<span class="pink nowrap">キャンペーン</span></h1>
     <p class="sec-lead">ブランド<span class="nowrap">リニューアル</span>を記念して、<span class="nowrap">スタッフ</span>が厳選した調味料<span class="nowrap">セット</span>2種を計100個限定で。日頃のご愛顧に感謝を込めた記念<span class="nowrap">クーポン</span>も配布します。</p>
     <div class="intro-grid">
       <a class="intro-card" href="#set1">
@@ -582,7 +584,7 @@ a{ text-decoration:none; color:inherit; }
 
   <section class="footer">
     <p class="fbrand">にっぽん津々浦々</p>
-    <p class="tagline" style="color:var(--pink-deep); margin-top:8px;">好きをくまなく。</p>
+    <p class="tagline" style="color:var(--white); margin-top:8px;">好きをくまなく。</p>
     <p style="margin-top:12px;"><a href="https://www.rakuten.co.jp/tsutsu-uraura/" target="_blank" rel="noopener">ショップトップページへ →</a></p>
     <p class="fop">運営：株式会社スペースアイランド</p>
   </section>
