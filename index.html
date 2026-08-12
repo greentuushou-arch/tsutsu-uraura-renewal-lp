@@ -88,6 +88,9 @@ a{ text-decoration:none; color:inherit; }
 .header-tag{ font-family:"Rubik",sans-serif; font-size:.66rem; color:var(--pink-soft); font-weight:700; letter-spacing:.1em; }
 .header-spacer{ height:50px; }
 
+/* ブランドタイトル＋イラスト（カウントダウンより上に先出し） */
+.brand-hero{ background:var(--paper); padding:48px 26px 0; }
+
 /* ファーストビュー */
 .fv{ position:relative; overflow:hidden; background:var(--paper); }
 .fv img{ width:100%; display:block; }
@@ -138,9 +141,9 @@ a{ text-decoration:none; color:inherit; }
 .intro-total{
   display:inline-block; width:100%; max-width:420px; box-sizing:border-box; text-align:center;
   background:var(--pink-deep); border-radius:999px; padding:16px 20px;
-  font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.22rem; color:var(--paper); white-space:nowrap;
+  font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.22rem; letter-spacing:.03em; color:var(--paper); white-space:nowrap;
 }
-.intro-total .big{ font-family:"Rubik",sans-serif; font-weight:700; font-size:1.65em; font-style:italic; color:var(--yellow); }
+.intro-total .big{ font-size:1em; color:var(--yellow); }
 
 /* キャンペーンの流れ（タイムライン） */
 .schedule{ background:var(--pink-soft); padding:60px 26px 54px; }
@@ -264,18 +267,6 @@ a{ text-decoration:none; color:inherit; }
 }
 .brand-fineprint{ font-size:.78rem; color:var(--ink); font-weight:500; margin-top:22px; line-height:1.85; }
 
-/* スタッフが選んだ理由 */
-.staff-voice{ background:var(--paper-2); padding:56px 26px 48px; }
-.staff-grid{ max-width:600px; margin:30px auto 0; display:flex; flex-direction:column; gap:24px; }
-.note-card{ position:relative; padding:6px 4px 6px 22px; border-left:3px solid var(--pink); }
-.note-tag{
-  display:inline-block; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.68rem; letter-spacing:.04em;
-  color:var(--pink-deep); background:var(--pink-soft); border-radius:999px; padding:3px 12px; margin-bottom:10px;
-}
-.note-card .q-mark{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900; font-size:1.8rem; color:var(--pink); line-height:.6; display:block; margin-bottom:8px; }
-.note-card blockquote{ margin:0 0 12px; font-size:.94rem; line-height:1.9; color:var(--ink); }
-.note-card figcaption{ font-size:.76rem; font-weight:700; color:var(--ink); letter-spacing:.02em; }
-
 /* 注意書き・フッター */
 .notices{ background:var(--card); padding:34px 26px 88px; }
 .notices-ttl{ font-family:"Zen Kaku Gothic New",sans-serif; font-size:.88rem; font-weight:700; color:var(--ink); margin:0 0 12px; }
@@ -329,9 +320,6 @@ a{ text-decoration:none; color:inherit; }
   .brand-body p{ font-size:1.22rem; }
   .brand-illust-cap{ font-size:.8rem; }
   .brand-fineprint{ font-size:.94rem; }
-  .note-tag{ font-size:.84rem; }
-  .note-card blockquote{ font-size:1.16rem; }
-  .note-card figcaption{ font-size:.92rem; }
   .notices-ttl{ font-size:1.05rem; }
   .notices li{ font-size:.92rem; }
   .footer{ font-size:1rem; }
@@ -365,6 +353,17 @@ a{ text-decoration:none; color:inherit; }
     <div class="fv-confetti" id="fvConfetti" aria-hidden="true"></div>
   </section>
 
+  <!-- ============================================================
+       ブランドタイトル＋イラスト（カウントダウンより上に先出し） ▼差し替え: images/brand/kumanaku.jpg
+       ============================================================ -->
+  <section class="brand-hero">
+    <h2 class="sec-title"><span class="nowrap">「好きをくまなく。」</span><br>今、そして次世代のお客様からも、さらに愛される<span class="nowrap">ブランド</span>へ。</h2>
+    <div class="brand-illust">
+      <img src="images/brand/kumanaku.jpg" alt="好きをくまなく。 にっぽん津々浦々の約束">
+      <p class="brand-illust-cap">illustration: yamyam</p>
+    </div>
+  </section>
+
   <div class="notice-strip"><span class="num jf">2026.9.1</span>(火)、にっぽん津々浦々はブランド<span class="nowrap">リニューアル</span>。<span class="num jf">9.1</span>(火)<span class="num jf">10:00</span>〜<span class="num jf">9.4</span>(金)<span class="num jf">9:59</span>は記念<span class="nowrap">キャンペーン</span>を開催します。</div>
 
   <!-- カウントダウン -->
@@ -393,7 +392,7 @@ a{ text-decoration:none; color:inherit; }
       </a>
     </div>
     <div class="intro-total-wrap">
-      <div class="intro-total">各種限定<span class="big jf">50</span>個販売！</div>
+      <div class="intro-total">各種限定<span class="big">50</span>個販売！</div>
     </div>
   </section>
 
@@ -534,44 +533,11 @@ a{ text-decoration:none; color:inherit; }
        ============================================================ -->
   <section class="brand">
     <span class="eyebrow jf">OUR STORY</span>
-    <h2 class="sec-title"><span class="nowrap">「好きをくまなく。」</span><br>今、そして次世代のお客様からも、さらに愛される<span class="nowrap">ブランド</span>へ。</h2>
-    <div class="brand-illust">
-      <img src="images/brand/kumanaku.jpg" alt="好きをくまなく。 にっぽん津々浦々の約束">
-      <p class="brand-illust-cap">illustration: yamyam</p>
-    </div>
     <div class="brand-body">
       <p>サービス開始以来、数々のショップアワードをいただきながら、多くのお客様に支えられてきた「にっぽん津々浦々」。この感謝を胸に、すでにご愛顧いただいている皆さまはもちろん、これから新しく出会う世代のお客様からも、さらに選ばれるブランドへと進化するため、このたびリニューアルいたしました。</p>
       <p>つくり手・届け手・使い手、それぞれの「好き」をていねいに選び、まじめに届ける――これまで貫いてきた姿勢を大切に、さらに大きく育てていく決意を、「好きをくまなく。」というブランドスローガンに込めています。</p>
       <p>新しいロゴは、小さな手描きのハートが寄り添い、多様な「好き」が暮らしの隅に咲く様子を表現。キービジュアルは<span class="nowrap">イラストレーター</span>・yamyam氏による描き下ろしイラストを使用し、「好き」があふれる、<span class="nowrap">イキイキ</span>とした暮らしの世界観を描いています。</p>
       <p class="brand-fineprint">※リニューアルによる、運営会社、各店舗URL、お取り扱い商品、ご注文方法の変更はありません。</p>
-    </div>
-  </section>
-
-  <!-- キャンペーン2商品をスタッフが選んだ理由 -->
-  <section class="staff-voice">
-    <div class="inner center-block" style="padding-bottom:0;">
-      <span class="eyebrow center jf">STAFF'S VOICE</span>
-      <h2 class="sec-title"><span class="nowrap">キャンペーン2商品を</span><br>スタッフが選んだ理由</h2>
-    </div>
-    <div class="staff-grid">
-      <figure class="note-card">
-        <span class="note-tag">① 「さ・し・す・せ・そ」セット</span>
-        <span class="q-mark" aria-hidden="true">“</span>
-        <blockquote>はじめて味見をしたとき、いつもの卵かけご飯がまったく違う一皿になって驚きました。まずは「さしすせそ」から試してみてほしいです。</blockquote>
-        <figcaption>商品部　佐藤</figcaption>
-      </figure>
-      <figure class="note-card">
-        <span class="note-tag">② 極み調味料三選</span>
-        <span class="q-mark" aria-hidden="true">“</span>
-        <blockquote>みりんを変えるだけで、煮物の照りとコクが見違えるほど変わります。毎日の食卓がちょっと誇らしくなるセットです。</blockquote>
-        <figcaption>店舗スタッフ　田中</figcaption>
-      </figure>
-      <figure class="note-card">
-        <span class="note-tag">① ＆ ②</span>
-        <span class="q-mark" aria-hidden="true">“</span>
-        <blockquote>「さしすせそ」も「極み三選」も、料理好きの友人に贈ったら「久しぶりに調味料に感動した」と喜ばれました。日々の食卓を格上げしてくれる2セットです。</blockquote>
-        <figcaption>バイヤー　中村</figcaption>
-      </figure>
     </div>
   </section>
 
