@@ -58,7 +58,7 @@ a{ text-decoration:none; color:inherit; }
 .eyebrow{
   display:flex; align-items:center; gap:10px;
   font-family:"Rubik",sans-serif; font-weight:700; font-size:.92rem;
-  letter-spacing:.18em; color:var(--pink-deep); margin:0 0 16px;
+  letter-spacing:.18em; color:var(--pink-deep); margin:0 0 16px; white-space:nowrap;
 }
 .eyebrow::before{ content:''; height:2px; width:32px; background:var(--pink); opacity:.8; }
 .eyebrow.center{ justify-content:center; }
@@ -145,19 +145,24 @@ a{ text-decoration:none; color:inherit; }
 .intro-coupon-promo{
   position:relative; display:block; margin-top:28px;
   background:var(--ink); color:var(--white); text-align:center; border-radius:10px;
-  padding:17px 20px; font-weight:700; font-size:1rem; letter-spacing:.06em;
+  padding:42px 20px 16px; font-weight:700; font-size:1.16rem; letter-spacing:.06em;
 }
 .intro-bubble{
   position:relative; display:block; width:100%; max-width:420px; box-sizing:border-box;
-  margin:26px auto 34px; background:var(--pink-deep); border-radius:14px; padding:15px 22px;
+  margin:26px auto 34px; background:transparent; border:3px solid var(--pink-deep); border-radius:14px; padding:12px 22px;
   text-align:center; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:900;
-  font-size:1.05rem; letter-spacing:.02em; color:var(--paper);
+  font-size:1.05rem; letter-spacing:.02em; color:var(--pink-deep);
 }
-.intro-bubble .big{ font-size:1.15em; color:var(--yellow); }
+.intro-bubble .big{ font-size:1.15em; }
+.intro-bubble::before{
+  content:''; position:absolute; left:50%; bottom:-19px; transform:translateX(-50%);
+  width:0; height:0; border-left:16px solid transparent; border-right:16px solid transparent;
+  border-top:19px solid var(--pink-deep); z-index:1;
+}
 .intro-bubble::after{
   content:''; position:absolute; left:50%; bottom:-13px; transform:translateX(-50%);
-  width:0; height:0; border-left:13px solid transparent; border-right:13px solid transparent;
-  border-top:15px solid var(--pink-deep);
+  width:0; height:0; border-left:12px solid transparent; border-right:12px solid transparent;
+  border-top:14px solid var(--paper); z-index:2;
 }
 .intro-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:22px; }
 .intro-bubble + .intro-grid{ margin-top:0; }
@@ -309,6 +314,8 @@ a{ text-decoration:none; color:inherit; }
 @media screen and (max-width:420px){
   .intro-grid{ gap:10px; }
   .intro-bubble{ font-size:.98rem; }
+  .eyebrow{ font-size:.8rem; letter-spacing:.1em; gap:8px; }
+  .eyebrow::before{ width:22px; }
 }
 
 @media screen and (min-width:768px){
@@ -321,7 +328,8 @@ a{ text-decoration:none; color:inherit; }
   .t-date-big{ font-size:4rem; letter-spacing:.04em; }
   .intro-bubble{ font-size:1.5rem; max-width:560px; padding:22px 32px; }
   .intro-badge{ width:74px; height:74px; font-size:1rem; top:-20px; left:16px; }
-  .intro-coupon-promo{ font-size:1.3rem; padding:22px 20px; }
+  .intro-coupon-promo{ font-size:1.55rem; padding:58px 20px 20px; }
+  .intro-coupon-br{ display:none; }
   .set-name{ font-size:2rem; }
   .special-price .sp-num{ font-size:4rem; }
   .special-price .sp-yen{ font-size:1.9rem; }
@@ -418,7 +426,7 @@ a{ text-decoration:none; color:inherit; }
     <p class="sec-lead">ブランド<span class="nowrap">リニューアル</span>を記念して、<span class="nowrap">スタッフ</span>が厳選した調味料<span class="nowrap">セット</span>2種を計100個限定で。日頃のご愛顧に感謝を込めた記念<span class="nowrap">クーポン</span>も配布します。</p>
     <a class="intro-coupon-promo" href="#coupon">
       <span class="intro-badge">第一弾</span>
-      リニューアル記念クーポン配布
+      リニューアル記念<br class="intro-coupon-br">クーポン配布
     </a>
     <div class="intro-bubble">各種<span class="big">50</span>個！記念セット限定販売</div>
     <div class="intro-grid">
