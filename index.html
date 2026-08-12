@@ -112,6 +112,14 @@ a{ text-decoration:none; color:inherit; }
 .fv-date .fd-rule{ width:60%; height:2px; background:var(--ink); margin:.4em 0 .38em; }
 .fv-date .fd-sub{ font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:clamp(.48rem,1.5vw,.62rem); letter-spacing:.05em; color:var(--ink); line-height:1.4; }
 
+/* リニューアル日付帯（黒） */
+.date-strip{
+  background:var(--ink); color:var(--white); text-align:center;
+  font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:.94rem;
+  letter-spacing:.01em; padding:16px 16px; line-height:1.8;
+}
+.date-strip .num{ font-family:"Rubik",sans-serif; font-weight:600; color:var(--yellow); white-space:nowrap; }
+
 /* リニューアル告知ストリップ */
 .notice-strip{
   background:var(--pink-soft); color:var(--white); text-align:center;
@@ -296,6 +304,7 @@ a{ text-decoration:none; color:inherit; }
 
   /* 小さな説明文字はPCではしっかり読みやすい大きさに */
   .header-tag{ font-size:.82rem; }
+  .date-strip{ font-size:1.15rem; }
   .notice-strip{ font-size:1.15rem; }
   .cd-label{ font-size:1.15rem; }
   .sec-lead{ font-size:1.3rem; }
@@ -353,6 +362,8 @@ a{ text-decoration:none; color:inherit; }
     <div class="fv-confetti" id="fvConfetti" aria-hidden="true"></div>
   </section>
 
+  <div class="date-strip"><span class="num jf">2026.9.1</span>(火)、にっぽん津々浦々は<span class="nowrap">リニューアル</span>いたします。</div>
+
   <!-- ============================================================
        ブランドタイトル＋イラスト（カウントダウンより上に先出し） ▼差し替え: images/brand/kumanaku.jpg
        ============================================================ -->
@@ -364,7 +375,7 @@ a{ text-decoration:none; color:inherit; }
     </div>
   </section>
 
-  <div class="notice-strip"><span class="num jf">2026.9.1</span>(火)、にっぽん津々浦々はブランド<span class="nowrap">リニューアル</span>。<span class="num jf">9.1</span>(火)<span class="num jf">10:00</span>〜<span class="num jf">9.4</span>(金)<span class="num jf">9:59</span>は記念<span class="nowrap">キャンペーン</span>を開催します。</div>
+  <div class="notice-strip"><span class="num jf">9.1</span>(火)<span class="num jf">10:00</span>〜<span class="num jf">9.4</span>(金)<span class="num jf">9:59</span>は<span class="nowrap">リニューアル</span>記念<span class="nowrap">キャンペーン</span>を開催します。</div>
 
   <!-- カウントダウン -->
   <div class="launch">
